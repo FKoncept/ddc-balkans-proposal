@@ -473,3 +473,10 @@ The user asked to push. Pushed `main` to GitHub (`FKoncept/ddc-balkans-proposal`
 Vercel is connected to the repo, so the push deploys to
 https://ddc-balkans-proposal.vercel.app. This publishes proposals 4 and 5, the guided
 walkthrough redesign and the dash clean-up; the old 11-slide deck is replaced.
+
+Verified on the live URL after the Vercel deploy: the homepage serves the walkthrough
+(welcome headline, `#change-5`, the "only here to help you think and decide" note,
+`walk.js`), the old deck is gone (`assets/deck.js` returns 404, no "Two more, for
+later" slide), the detail pages show "Change n of 5" and "More detail, if you want it",
+the live stylesheet has the chevron and no dash characters, and `X-Robots-Tag:
+noindex, nofollow` is still sent.
