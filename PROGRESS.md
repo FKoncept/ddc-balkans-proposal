@@ -464,3 +464,12 @@ The user asked that any "big dash" on the website be replaced. Full check:
 
 The user asked for all docs to be up to date. CLAUDE.md and PROGRESS.md were already
 current; TODO.md's push item now also lists the dash clean-up. Committed, not pushed.
+
+---
+
+## 2026-09-23 — Session 1 (continued): pushed live
+
+The user asked to push. Pushed `main` to GitHub (`FKoncept/ddc-balkans-proposal`);
+Vercel is connected to the repo, so the push deploys to
+https://ddc-balkans-proposal.vercel.app. This publishes proposals 4 and 5, the guided
+walkthrough redesign and the dash clean-up; the old 11-slide deck is replaced.
