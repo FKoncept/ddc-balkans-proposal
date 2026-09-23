@@ -63,7 +63,7 @@ These change the size of the work, so the estimates stay rough until we know the
 - [ ] **Support and hosting price** for proposal 1 (hosting, backups, fixes), once we
       pick the stack.
 
-- [ ] **Contact details on the last slide.** The "Next step" screen asks for a
+- [ ] **Contact details on the last screen.** The "Next step" screen asks for a
       one-hour walkthrough but shows no email or phone (it says "reply to whoever
       sent you this link"), because we have not confirmed which
       F Koncept contact to use. Add it once confirmed.
