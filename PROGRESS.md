@@ -251,3 +251,55 @@ recruiter's workflow is second-hand.
   replacing the Pro licence line.
 - Deck: "We will" now includes signing a data processing agreement; the suggested
   order slide says steps 1 and 2 need permission to add a small plugin to WordPress.
+
+---
+
+## 2026-09-23 — Session 1 (continued): research for two more proposals
+
+The user asked whether there is room for **two more proposals** that improve the
+recruiter's job, and that are **not close to the three we already have**. Opinion
+first, no site changes yet.
+
+### New research findings
+
+- **Applications do not only come through the WordPress form.**
+  - **MojPosao.ba**: DDC MLS d.o.o. Sarajevo posted "Customer Support Agent (English
+    language)" on **22 Aug 2026**, deadline 22 Sep 2026. MojPosao has its own apply
+    button, so those applications land in MojPosao, not in WordPress.
+  - **Email**: an older DDC MLS ad (PDF, 2022) says "apply by sending CV on email:
+    posao@ddcce.ba (Sarajevo) or posaobl@ddcce.ba (Banja Luka)". Other results
+    mention posao@ddcmls.com. These inboxes may still receive CVs.
+  - **LinkedIn**: DDC MLS posted jobs there (for example a Customer Support Advisor
+    role, about a year ago, "Be among the first 25 applicants").
+  - Also listed on **poslovi.ba** (DDC MLS: "Operater za engleski i njemački
+    jezik", remote, data entry, "minimum nivo B2", "Čitanje i pisanje navedenih
+    jezika je važnije od vještine izgovora") and **Infostud** (DDC OS Serbia profile).
+  - **Consequence:** proposal 1 as written only pulls in WordPress applications. It
+    needs an answer for the other channels (see the opinion below), or the "one list"
+    promise is incomplete.
+- **Banja Luka** is a third DDC site in BiH (theddcgroup.com locations page), but the
+  careers site's location filter only lists Sarajevo and Belgrade. Question for the
+  client.
+- **Language level is the core of every role**, and what matters differs by role:
+  spoken for support, written for data entry (the poslovi.ba ad says so directly).
+- Candidate interview reviews found online (HelloWorld.rs) are for **DDC OSS**, the
+  Belgrade IT company (Git and Excel tests), so they do not describe the language hub.
+  dzobs.com (404) and the Klix forum (403) could not be read. **How DDC Balkans tests
+  languages today is unknown.**
+
+### Opinion given to the user (not yet on the site)
+
+Recommended two new proposals:
+4. **Language check reviewed by DDC's own speakers**: candidates record short spoken
+   answers and write one short reply in the target language, in the browser; a
+   colleague who speaks that language rates it against a simple level scale; the result
+   lands on the record. No AI scoring. Medium, about 3 to 4 weeks.
+5. **From "yes" to first day (pre-boarding)**: a personal page for each new hire
+   (start date, what to bring, documents to upload, "I'm coming" confirmation) and a
+   board for the recruiter; day-one attendance moves the person to "Working". Medium,
+   about 3 to 4 weeks.
+
+Considered and not recommended as proposals: hiring requests from team leads (backup
+option), multi-channel intake (a gap to close inside proposal 1, not a new proposal),
+a candidate FAQ chatbot, AI CV parsing, and automatic posting to job boards (no
+verified APIs).

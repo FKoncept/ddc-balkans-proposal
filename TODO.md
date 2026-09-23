@@ -36,6 +36,16 @@ These change the size of the work, so the estimates stay rough until we know the
       is enough, see `PROGRESS.md`), but with Pro we reuse its form builder, and its
       shortlist/reject/rate may already be in use.
 - [ ] Which statuses do they actually use in Excel? Get the real list of columns.
+- [ ] **Where do applications arrive today?** We found DDC ads on MojPosao.ba (Aug
+      2026), LinkedIn, poslovi.ba and older ads asking for CVs by email (posao@ddcce.ba,
+      posaobl@ddcce.ba). Which channels are still active, and roughly what share of
+      applications comes from each? Does MojPosao let them export applications?
+- [ ] Is **Banja Luka** still hiring? The careers site filter lists only Sarajevo and
+      Belgrade.
+- [ ] **How are languages tested today?** Phone call with a colleague, a written test,
+      an outside testing company, or a test the end client requires?
+- [ ] **Who handles everything after "yes"** (documents, contract data, start date,
+      first day): the recruiter or a separate HR person?
 - [ ] What happens after "hired": is there a separate HR/payroll system that knows
       who currently works there? If yes, can it export a list?
 - [ ] How long do they keep candidate data, and is there a written retention policy?
