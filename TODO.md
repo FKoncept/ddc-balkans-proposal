@@ -10,11 +10,11 @@ move its story to `PROGRESS.md` and delete it here.
 
 - [ ] **Recruiter's name and preferred language.** The presentation is in English
       (the DDC site is English). Should there also be a Bosnian/Serbian version?
-- [ ] **Pricing.** The site shows difficulty and rough effort only, no prices. Do we
-      want price ranges on the site, or only in the meeting?
-- [ ] **Push** when the user is happy. Committed but not pushed on 2026-09-23:
-      proposals 4 and 5, and the walkthrough redesign. The live site still shows the
-      old 11-slide deck until then.
+- [ ] **Pricing.** The site shows size (small / medium / bigger job) and rough weeks
+      only, no prices. Do we want price ranges on the site, or only in the meeting?
+- [ ] **Push.** The user approved the walkthrough redesign on 2026-09-23 but has not
+      asked for a push yet. Committed, not pushed: proposals 4 and 5 and the redesign.
+      The live site still shows the old 11-slide deck until then.
 - [ ] **Alone or presented?** Not decided yet. The walkthrough supports both; if it
       will be presented, consider a short presenter note.
 - [x] ~~Who builds proposal 1?~~ Answered 2026-09-23: the user and Claude together.
@@ -63,8 +63,9 @@ These change the size of the work, so the estimates stay rough until we know the
 - [ ] **Support and hosting price** for proposal 1 (hosting, backups, fixes), once we
       pick the stack.
 
-- [ ] **Contact details on the last slide.** The "Next step" slide asks for a
-      walkthrough but shows no email or phone, because we have not confirmed which
+- [ ] **Contact details on the last slide.** The "Next step" screen asks for a
+      one-hour walkthrough but shows no email or phone (it says "reply to whoever
+      sent you this link"), because we have not confirmed which
       F Koncept contact to use. Add it once confirmed.
 - [ ] **Review pass by the user** of every claim and estimate before the link is sent
       to the recruiter. The link is public already (noindex), so share it only when

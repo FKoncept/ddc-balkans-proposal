@@ -428,3 +428,9 @@ Answers to the open questions:
   (Next, arrows, browser Back, chapter jumps, switches, picks total) was tested by
   script and with real key presses.
 - Committed, **not pushed** (user's instruction).
+
+### User feedback on the redesign
+
+The user reviewed the walkthrough locally: **"this is much much better"**. Approved as
+is. Docs brought up to date (TODO wording now uses "size" and "screen"), committed,
+still **not pushed**: the push waits for the user's go.
