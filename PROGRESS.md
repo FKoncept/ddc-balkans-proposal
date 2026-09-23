@@ -349,3 +349,82 @@ verified APIs).
 - Checked at 1440x800, 1440x716 and 390 wide: no horizontal overflow on any page.
 - Committed, **not pushed** (user's instruction), so the live site does not show this
   yet.
+
+---
+
+## 2026-09-23 — Session 1 (continued): UX redesign into a guided walkthrough
+
+### Why
+
+The user found the site overwhelming: "someone new that opens it cannot understand
+what is going on". Diagnosis:
+- 12 dense slides, each with a mockup, bullets, difficulty bars and links at once.
+- Organised around our five proposals, not around her problems.
+- Jargon on the main path ("guardrails", "WordPress plugin", "data processing
+  agreement").
+- No clear "what is this, how long does it take, what do you want from me".
+
+### Options explored (`design/ux-options/`, not deployed)
+
+Three clickable mockups, same brand and content, different structure:
+- **A. Guided walkthrough**: one idea per screen, progress bar, Next/Back.
+- **B. Start from your problem**: five problems in her words; click one to open the fix.
+- **C. Your week, before and after**: five moments in a week; one Today / With the
+  changes switch.
+
+**The user chose our recommendation:** A as the backbone, with B's problem-in-her-words
+on every change screen and C's Today / With this change switch as the picture.
+Answers to the open questions:
+1. Unsure whether she reads it alone or it is presented: **support both**.
+2. The combination.
+3. Keep "which would help you?", **clearly marked as only for showing and deciding**.
+4. Detail pages: our call. **Kept** (the brief asked for pages that open in new
+   tabs), made shorter to read.
+
+### What was built
+
+- **`site/index.html` is now an 11-screen walkthrough** driven by
+  **`site/assets/walk.js`** (the old `deck.js` is deleted):
+  Start, How it works today, The idea, Change 1 to 5, Your choice, What we promise,
+  Next step.
+  - Welcome screen: who it is from, what it is, "about 5 minutes", nothing decided,
+    names made up, and a five-item "what's inside" list. Start or skip to the changes.
+  - Chapter pills (clickable), progress bar, bottom bar with Back, "Step n of 10" and
+    "Next: <next screen>".
+  - Every screen has its own link (`#today`, `#idea`, `#change-1` ... `#next`), browser
+    Back works, arrow keys and PageUp/PageDown work (for presenting). The browser's
+    own jump to an anchor on load is cancelled so the header stays in view. Focus moves
+    to the new screen for screen readers. Without JavaScript all screens show in order.
+  - "The idea" screen lists the five changes as buttons to jump to any of them.
+  - **Each change screen uses one template:** "Change n of 5: name", a benefit
+    headline, her problem in a "Sounds familiar?" box, then What changes / What it
+    takes / What we need, fold-away "behind the scenes" or "what it is not", a link to
+    the detail page (new tab), and on the right a **Today / With this change** switch
+    with a small before and after picture.
+  - Plain-language size: **Small job / Medium job / Bigger job** (instead of Low /
+    Medium / Medium to high), always with the rough weeks.
+  - "Your choice": five tick boxes with a rough week total, and a yellow note: "This is
+    only here to help you think and decide. Nothing you tick is saved or sent anywhere."
+  - "What we promise, and what we don't" is its own short screen.
+  - Next step: one hour with the Excel, the nine questions in a fold-away, "reply to
+    whoever sent you this link" (contact details still open in `TODO.md`).
+- **Honesty fixes during the build:** the problem box first said "You told us", which is
+  untrue (she never spoke to us), so it says **"Sounds familiar?"**. Change 5's "after"
+  picture shows 7 of 8 ready, not a perfect 8 of 8.
+- **Detail pages** now say "Change n of 5", link "Back to the overview" to that change's
+  screen, use the plain size words, open with an **"In short"** block (her problem,
+  what changes, what it takes, what we need), and gather the heavy parts into one
+  **"More detail, if you want it"** group of fold-away sections: other application
+  channels, the plugin question, the two ways to build it, how we would run it, and
+  what's included / not. Tab titles read "Change n of 5 for The DDC Group Balkans".
+- **CSS:** the old deck styles were removed; shared mockup components (alerts, forms,
+  task lists, filter pills) were kept; `.wordmark` and `.avatar` were restored after
+  the clean-up dropped them (caught by a script that compares classes used against
+  classes defined). New: walkthrough layout, `.said`, `.pce`, `details.more`, scene
+  switch, sheet, chain, bigstat, picks, two-lists. Chapter pills scroll sideways on
+  phones.
+- **Checked** at 1440x800, 1440x900 and 390x844: no horizontal overflow on any screen
+  or detail page (with all fold-aways open), the demo still works, and navigation
+  (Next, arrows, browser Back, chapter jumps, switches, picks total) was tested by
+  script and with real key presses.
+- Committed, **not pushed** (user's instruction).

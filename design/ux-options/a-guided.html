@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Option A: Guided walkthrough</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mockups.css">
+<style>
+  body.mock { min-height: 100svh; display: flex; flex-direction: column; }
+  .stage { flex: 1; display: grid; align-items: center; padding-block: 1rem 7rem; }
+  .screen[hidden] { display: none !important; }
+  .screen { animation: rise .35s ease both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+
+  body.mock.welcome { background: radial-gradient(1100px 700px at 100% 110%, rgba(31,128,147,.45), transparent 60%), var(--navy); color: #fff; }
+  body.welcome .lead { color: var(--on-navy-2); }
+  body.welcome .muted { color: var(--on-navy-3); }
+
+  .chapters { list-style: none; margin: 0; padding: 0; display: flex; gap: .4rem; flex-wrap: wrap; }
+  .chapters li { font-size: .8125rem; font-weight: 600; color: var(--muted); padding: .35rem .7rem; border-radius: 999px; background: #e8edf3; }
+  .chapters li.on { background: var(--navy); color: #fff; }
+  .chapters li.done { background: #dff3ec; color: #13704f; }
+  .bar { height: 4px; background: #e3e8ef; }
+  .bar i { display: block; height: 100%; background: var(--teal); transition: width .3s; }
+
+  .navbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    background: rgba(243,246,250,.94); backdrop-filter: blur(8px); border-top: 1px solid var(--line);
+    padding: .9rem clamp(1.25rem, 5vw, 3rem) calc(env(safe-area-inset-bottom, 0px) + .9rem);
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+  .navbar .where { font-size: .875rem; color: var(--muted); }
+  .welcome-page .navbar { display: none; }
+
+  .flow3 { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: .75rem; align-items: center; margin: 1.5rem 0; }
+  .flow3 .node { background: #fff; border-radius: var(--radius-m); padding: 1rem; box-shadow: 0 0 0 1px var(--line); font-weight: 600; font-size: .9375rem; }
+  .flow3 .node small { display: block; font-weight: 400; color: var(--muted); margin-top: .25rem; }
+  .flow3 .node.hand { box-shadow: 0 0 0 2px var(--raspberry); }
+  .flow3 .node.hand small { color: #9a1f63; font-weight: 600; }
+  .flow3 .arrow { color: var(--muted); font-size: 1.25rem; }
+  @media (max-width: 700px) { .flow3 { grid-template-columns: 1fr; } .flow3 .arrow { transform: rotate(90deg); justify-self: center; } }
+
+  .issues { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; }
+  .issues li { background: #fff; border-radius: var(--radius-m); padding: .8rem 1rem; box-shadow: inset 3px 0 0 var(--raspberry), 0 0 0 1px var(--line); }
+
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+  .ba > div { background: #fff; border-radius: var(--radius-l); padding: 1.1rem; box-shadow: 0 0 0 1px var(--line); }
+  .ba h3 { margin: 0 0 .75rem; font-size: 1rem; }
+  .ba .rows { font-size: .8125rem; display: grid; gap: 4px; }
+  .ba .rows span { display: grid; grid-template-columns: 2.2rem 1fr auto; gap: .5rem; padding: .35rem .5rem; background: #f6f7f9; border-radius: 4px; }
+  .ba .rows span.x { background: #fdf0f6; color: #7d1850; }
+  @media (max-width: 700px) { .ba { grid-template-columns: 1fr; } }
+
+  .change-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+  @media (max-width: 860px) { .change-grid { grid-template-columns: 1fr; } }
+  .count { font-size: .9375rem; font-weight: 600; color: var(--teal); margin: 0 0 .5rem; }
+
+  .picks { display: grid; gap: .6rem; margin: 1.25rem 0; }
+  .picks label { display: grid; grid-template-columns: auto 1fr auto; gap: .9rem; align-items: center; background: #fff; border-radius: var(--radius-m); padding: .9rem 1rem; box-shadow: 0 0 0 1px var(--line); cursor: pointer; }
+  .picks label:has(input:checked) { box-shadow: 0 0 0 2px var(--teal); }
+  .picks input { width: 1.2rem; height: 1.2rem; accent-color: var(--teal); }
+  .picks small { display: block; color: var(--muted); font-size: .875rem; }
+  .total { background: var(--navy); color: #fff; border-radius: var(--radius-m); padding: 1rem 1.2rem; }
+  .total b { color: var(--teal-light); }
+</style>
+</head>
+<body class="mock welcome-page" id="body">
+
+<div id="top-ui" hidden>
+  <div class="topline"><span><b>F Koncept</b> for the DDC Balkans recruitment team</span><span>About 5 minutes</span></div>
+  <div class="wrap"><ol class="chapters" id="chapters"></ol></div>
+  <div class="bar" style="margin-top:1rem"><i id="bar"></i></div>
+</div>
+
+<main class="stage" id="stage">
+
+  <!-- 0 Welcome -->
+  <section class="screen" data-ch="-1">
+    <div class="wrap">
+      <div class="read">
+        <p class="muted" style="margin-bottom:2rem">From F Koncept, Sarajevo. For the recruitment team at The DDC Group Balkans.</p>
+        <h1 class="big">Less copying, fewer mix-ups, and one list you can trust.</h1>
+        <p class="lead">We looked at how job applications reach you and where time gets lost. In about five minutes, step by step, we show what we would change and what it would take.</p>
+        <p class="lead" style="font-size:1rem">Nothing here is decided. You choose what is useful.</p>
+        <button class="btn big-btn" type="button" data-go="1">Start</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1 Today -->
+  <section class="screen" data-ch="0" hidden>
+    <div class="wrap">
+      <div class="read" style="max-width:52rem">
+        <h2 class="mid">This is how applications reach you today.</h2>
+        <div class="flow3">
+          <div class="node">Someone applies<small>on the careers website</small></div><span class="arrow">&#8594;</span>
+          <div class="node hand">You copy it into Excel<small>by hand, one by one</small></div><span class="arrow">&#8594;</span>
+          <div class="node hand">You update each status<small>by hand, from memory</small></div>
+        </div>
+        <p class="lead">Because it all lives in one big file that nothing checks, the file slowly stops matching reality. For example:</p>
+        <ul class="issues">
+          <li>Someone who already works here is still marked "to contact".</li>
+          <li>Someone who left gets a call about a new job.</li>
+          <li>The same person appears twice, because they applied for two jobs.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 The idea -->
+  <section class="screen" data-ch="1" hidden>
+    <div class="wrap">
+      <div class="read" style="max-width:52rem">
+        <h2 class="mid">The idea: one list that fills itself and checks itself.</h2>
+        <p class="lead">Instead of copying into Excel, every application lands in one shared list on its own. Each person exists once, with their whole history.</p>
+        <div class="ba">
+          <div>
+            <h3>Today, in Excel</h3>
+            <div class="rows">
+              <span class="x"><b>14</b>Amina Hodžić<em>To contact</em></span>
+              <span><b>15</b>Lejla Begić<em>Rejected</em></span>
+              <span class="x"><b>212</b>Amina Hodzic<em>Working</em></span>
+            </div>
+            <p class="small muted" style="margin:.75rem 0 0">Two rows, two different answers.</p>
+          </div>
+          <div>
+            <h3>With the new list</h3>
+            <div style="display:flex;gap:.75rem;align-items:center">
+              <div class="avatar" style="width:40px;height:40px">AH</div>
+              <div><b>Amina Hodžić</b><div class="small muted">applied twice</div></div>
+              <span class="chip working" style="margin-left:auto">Working</span>
+            </div>
+            <p class="small" style="margin:.75rem 0 0;color:#13704f;font-weight:600">Hidden from call lists while she works here.</p>
+          </div>
+        </div>
+        <p class="lead">We suggest <b>five changes</b>. Each one fixes one problem. You can take one, some, or all.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 Change 1 -->
+  <section class="screen" data-ch="2" hidden>
+    <div class="wrap change-grid">
+      <div>
+        <p class="count">Change 1 of 5</p>
+        <h2 class="mid">No more copying, and no more duplicates.</h2>
+        <dl class="pce">
+          <div><dt>The problem</dt><dd>Every application is copied into Excel by hand, and the same person can end up in two rows with two different statuses.</dd></div>
+          <div><dt>What changes</dt><dd>Applications appear in one shared list on their own. If the same person applies again, it is added to their existing record. People who work here are never in your call list.</dd></div>
+          <div><dt>What it takes</dt><dd><span class="effort-pill"><span class="meter" data-level="3"><span class="bars"><i></i><i></i><i></i></span>Bigger job</span><span class="muted">about 5 to 8 weeks</span></span></dd></div>
+        </dl>
+        <details class="more"><summary>How does it work behind the scenes?</summary><div><p>A small add-on on your careers website sends each new application to the list. Your existing Excel is imported once, and you confirm possible duplicates before anything is merged. Candidates see no change.</p></div></details>
+        <p style="margin-top:1rem"><a class="btn light small ext" href="../../site/ideas/one-candidate-list.html" target="_blank" rel="noopener">Try the working demo</a></p>
+      </div>
+      <div class="window" aria-label="Mockup of the candidate list">
+        <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">Candidates</span><span class="sample">Sample data</span></div>
+        <div class="window-body">
+          <div class="alert warn"><span><b>Already in your list.</b> Amina Hodžić applied again. She works here since March, so she was not added to "to contact".</span></div>
+          <table class="list"><tbody>
+            <tr><td class="who">Tarik Hadžić<span class="sub">German C1</span></td><td><span class="chip new">New</span></td></tr>
+            <tr><td class="who">Selma Mujić<span class="sub">German B2</span></td><td><span class="chip progress">Contacted</span></td></tr>
+            <tr><td class="who">Amina Hodžić<span class="sub">2 applications</span></td><td><span class="chip working">Working</span></td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Change 2 -->
+  <section class="screen" data-ch="2" hidden>
+    <div class="wrap change-grid">
+      <div>
+        <p class="count">Change 2 of 5</p>
+        <h2 class="mid">Applications that already tell you what you need.</h2>
+        <dl class="pce">
+          <div><dt>The problem</dt><dd>The form asks for name, email, phone and a CV. Language level, city and start date are hidden inside the CV, so you read every one.</dd></div>
+          <div><dt>What changes</dt><dd>The form asks four more short questions. You can sort and filter by language, level and city straight away. Every applicant also gets a "we received it" email.</dd></div>
+          <div><dt>What it takes</dt><dd><span class="effort-pill"><span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Small job</span><span class="muted">about 1 to 2 weeks</span></span></dd></div>
+        </dl>
+        <details class="more"><summary>Anything else in this change?</summary><div><p>The job ads become real text under the poster image, so phones, translation tools and Google can read them. We also fix a few typos on the careers site.</p></div></details>
+      </div>
+      <div class="window" aria-label="Mockup of the new form">
+        <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">Apply</span></div>
+        <div class="window-body">
+          <div class="form-mock">
+            <label>Full name<span class="input">Tarik Hadžić</span></label>
+            <label class="new-field">Languages and level <span class="newtag">New</span><span class="input"><span class="tag">German C1</span><span class="tag">English B2</span></span></label>
+            <div class="grid2">
+              <label class="new-field">City <span class="newtag">New</span><span class="input">Sarajevo</span></label>
+              <label class="new-field">Can start <span class="newtag">New</span><span class="input">1 Oct</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 note -->
+  <section class="screen" data-ch="2" hidden>
+    <div class="wrap"><div class="read">
+      <p class="count">Changes 3, 4 and 5</p>
+      <h2 class="mid">(In the mockup, the remaining three follow the same pattern.)</h2>
+      <p class="lead">Change 3: reminders and ready-made messages. Change 4: a language check your colleagues can review. Change 5: from "yes" to the first day.</p>
+      <p class="muted small">Each gets the same screen: the problem, what changes, what it takes, one picture, and an optional "more" link.</p>
+    </div></div>
+  </section>
+
+  <!-- 6 choose -->
+  <section class="screen" data-ch="3" hidden>
+    <div class="wrap"><div class="read" style="max-width:44rem">
+      <h2 class="mid">Which of these would help you most?</h2>
+      <p class="lead">Tick what sounds useful. This only helps you think; nothing is sent anywhere.</p>
+      <div class="picks" id="picks">
+        <label><input type="checkbox" data-min="5" data-max="8" checked><span><b>No more copying, no duplicates</b><small>the core fix</small></span><span class="muted small">5 to 8 weeks</span></label>
+        <label><input type="checkbox" data-min="1" data-max="2" checked><span><b>Applications that tell you more</b><small>can start first</small></span><span class="muted small">1 to 2 weeks</span></label>
+        <label><input type="checkbox" data-min="3" data-max="4"><span><b>Reminders and ready-made messages</b><small>needs the first change</small></span><span class="muted small">3 to 4 weeks</span></label>
+        <label><input type="checkbox" data-min="3" data-max="4"><span><b>Language check</b><small>works on its own</small></span><span class="muted small">3 to 4 weeks</span></label>
+        <label><input type="checkbox" data-min="3" data-max="4"><span><b>From yes to first day</b><small>best with the first change</small></span><span class="muted small">3 to 4 weeks</span></label>
+      </div>
+      <div class="total" id="total"></div>
+    </div></div>
+  </section>
+
+  <!-- 7 next -->
+  <section class="screen" data-ch="4" hidden>
+    <div class="wrap"><div class="read">
+      <h2 class="big">One hour, with your Excel open.</h2>
+      <p class="lead">You show us how you really work today. We come back with a fixed price and dates for the changes you picked. No personal data needs to leave your computer.</p>
+      <p class="lead">[Contact details go here]</p>
+      <details class="more"><summary>What we promise, and what we don't</summary><div><p>We build only what you choose, keep your careers website as it is, and never merge records without your say. We don't promise more applicants, legal compliance, or automatic scoring of candidates.</p></div></details>
+    </div></div>
+  </section>
+
+</main>
+
+<nav class="navbar" id="navbar" aria-label="Steps">
+  <button class="btn light" type="button" id="back">Back</button>
+  <span class="where" id="where"></span>
+  <button class="btn" type="button" id="next">Next</button>
+</nav>
+
+<div class="mock-banner">Mockup A: guided walkthrough. <a href="index.html">All options</a></div>
+
+<script>
+(() => {
+  const CH = ['Today', 'The idea', 'Five changes', 'Your choice', 'Next step'];
+  const screens = [...document.querySelectorAll('.screen')];
+  const chapters = document.getElementById('chapters');
+  CH.forEach((c) => { const li = document.createElement('li'); li.textContent = c; chapters.append(li); });
+  let i = 0;
+  const show = (n) => {
+    i = Math.max(0, Math.min(screens.length - 1, n));
+    screens.forEach((s, j) => { s.hidden = j !== i; });
+    const ch = +screens[i].dataset.ch;
+    const welcome = ch < 0;
+    document.body.classList.toggle('welcome-page', welcome);
+    document.body.classList.toggle('welcome', welcome);
+    document.getElementById('top-ui').hidden = welcome;
+    [...chapters.children].forEach((li, k) => { li.className = k === ch ? 'on' : k < ch ? 'done' : ''; });
+    document.getElementById('bar').style.width = (i / (screens.length - 1) * 100) + '%';
+    document.getElementById('where').textContent = `Step ${i} of ${screens.length - 1}`;
+    document.getElementById('back').disabled = i === 0;
+    document.getElementById('next').textContent = i === screens.length - 1 ? 'Back to start' : 'Next';
+    window.scrollTo(0, 0);
+  };
+  document.getElementById('next').onclick = () => show(i === screens.length - 1 ? 0 : i + 1);
+  document.getElementById('back').onclick = () => show(i - 1);
+  document.querySelectorAll('[data-go]').forEach((b) => b.onclick = () => show(+b.dataset.go));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') show(i + 1);
+    if (e.key === 'ArrowLeft') show(i - 1);
+  });
+  const total = () => {
+    const on = [...document.querySelectorAll('#picks input:checked')];
+    const min = on.reduce((a, x) => a + +x.dataset.min, 0), max = on.reduce((a, x) => a + +x.dataset.max, 0);
+    document.getElementById('total').innerHTML = on.length
+      ? `You picked <b>${on.length}</b> of 5. Done one after another, that is roughly <b>${min} to ${max} weeks</b>. Some can run side by side.`
+      : 'Nothing picked yet.';
+  };
+  document.getElementById('picks').addEventListener('change', total);
+  total();
+  show(0);
+})();
+</script>
+</body>
+</html>

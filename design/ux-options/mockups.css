@@ -1,0 +1,51 @@
+/* Shared styles for the three UX option mockups. Builds on the site's brand tokens. */
+@import url("../../site/assets/styles.css");
+
+body.mock { background: var(--paper); color: var(--ink); font-size: 1.0625rem; }
+.mock-banner {
+  position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + .75rem); transform: translateX(-50%);
+  z-index: 50; background: #fff3c4; color: #5a4700; font-size: .8125rem; font-weight: 600;
+  padding: .45rem .9rem; border-radius: 999px; box-shadow: 0 6px 20px -6px rgba(0,0,0,.3);
+  white-space: nowrap;
+}
+.mock-banner a { color: inherit; }
+
+.topline {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+  padding: calc(env(safe-area-inset-top, 0px) + 1rem) clamp(1.25rem, 5vw, 3rem) 1rem;
+  font-size: .875rem; color: var(--muted);
+}
+.topline b { color: var(--ink); }
+.topline.dark { color: var(--on-navy-3); }
+.topline.dark b { color: #fff; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: clamp(1.25rem, 5vw, 3rem); }
+.read { max-width: 38rem; }
+.big { font-size: clamp(2rem, 4.2vw, 3.25rem); line-height: 1.08; letter-spacing: -.025em; font-weight: 600; margin: 0 0 1rem; text-wrap: balance; }
+.mid { font-size: clamp(1.5rem, 2.8vw, 2.125rem); line-height: 1.15; letter-spacing: -.02em; font-weight: 600; margin: 0 0 .75rem; text-wrap: balance; }
+.lead { font-size: clamp(1.125rem, 1.6vw, 1.3125rem); color: var(--ink-2); margin: 0 0 1.25rem; }
+.muted { color: var(--muted); }
+.small { font-size: .9375rem; }
+
+.btn.light { background: #fff; color: var(--ink); box-shadow: 0 0 0 1px var(--line); }
+.btn.light:hover { background: #f5f8fb; }
+.btn.big-btn { font-size: 1.0625rem; padding: 1rem 1.5rem; }
+button.btn { font-family: inherit; }
+
+/* problem / change / effort blocks */
+.pce { display: grid; gap: 1px; background: var(--line); border-radius: var(--radius-m); overflow: hidden; margin: 1.25rem 0; box-shadow: 0 0 0 1px var(--line); }
+.pce > div { background: #fff; padding: 1rem 1.2rem; display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; align-items: baseline; }
+.pce dt { font-size: .875rem; font-weight: 600; color: var(--muted); }
+.pce dd { margin: 0; }
+@media (max-width: 600px) { .pce > div { grid-template-columns: 1fr; gap: .25rem; } }
+
+.effort-pill { display: inline-flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+
+details.more { margin-top: 1rem; border-radius: var(--radius-m); background: #fff; box-shadow: 0 0 0 1px var(--line); }
+details.more summary { cursor: pointer; padding: .9rem 1.1rem; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::after { content: "+"; font-size: 1.25rem; color: var(--teal); }
+details.more[open] summary::after { content: "\2212"; }
+details.more > div { padding: 0 1.1rem 1rem; color: var(--ink-2); }
+
+.term { border-bottom: 1.5px dotted var(--teal); cursor: help; }

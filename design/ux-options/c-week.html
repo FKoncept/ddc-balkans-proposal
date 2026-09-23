@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Option C: Your week, before and after</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mockups.css">
+<style>
+  .intro { padding: 2.5rem 0 1.5rem; }
+  .switch {
+    position: sticky; top: 0; z-index: 20; background: rgba(243,246,250,.95); backdrop-filter: blur(8px);
+    padding: .8rem 0; border-bottom: 1px solid var(--line);
+  }
+  .switch .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .seg { display: inline-flex; background: #e3e8ef; border-radius: 999px; padding: 4px; }
+  .seg button { font: inherit; font-weight: 600; border: 0; background: none; padding: .6rem 1.1rem; border-radius: 999px; cursor: pointer; color: var(--ink-2); }
+  .seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+  .seg button[aria-pressed="true"].after-btn { background: var(--teal); }
+
+  .week { list-style: none; margin: 2rem 0 6rem; padding: 0; display: grid; gap: 1.25rem; }
+  .moment { display: grid; grid-template-columns: 9rem minmax(0,1fr) minmax(0, 20rem); gap: 1.5rem; align-items: start; background: #fff; border-radius: var(--radius-l); padding: 1.4rem; box-shadow: 0 0 0 1px var(--line); }
+  .moment time { font-weight: 700; color: var(--navy); }
+  .moment time small { display: block; font-weight: 400; color: var(--muted); font-size: .875rem; }
+  .moment h3 { margin: 0 0 .4rem; font-size: 1.1875rem; }
+  .moment p { margin: 0; color: var(--ink-2); }
+  .moment .fixby { margin-top: .75rem; font-size: .875rem; color: var(--muted); }
+  .moment .fixby a { color: var(--teal); font-weight: 600; }
+  .scene { border-radius: var(--radius-m); padding: .9rem; font-size: .8125rem; min-height: 6rem; }
+  .today .scene { background: #fdf0f6; color: #7d1850; }
+  .after .scene { background: #dff3ec; color: #0f5c41; }
+  [data-when] { display: none; }
+  body.today [data-when="today"], body.after [data-when="after"] { display: revert; }
+  body.today .fixby { display: none; }
+  @media (max-width: 860px) { .moment { grid-template-columns: 1fr; gap: .75rem; } }
+
+  .sum { background: var(--navy); color: #fff; border-radius: var(--radius-l); padding: 1.5rem; margin-bottom: 6rem; }
+  .sum table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  .sum td { padding: .6rem 0; border-top: 1px solid rgba(255,255,255,.12); color: var(--on-navy-2); }
+  .sum td:last-child { text-align: right; color: #fff; font-weight: 600; }
+</style>
+</head>
+<body class="mock today" id="body">
+
+<div class="topline"><span><b>F Koncept</b> for the DDC Balkans recruitment team</span><span>About 5 minutes</span></div>
+
+<div class="wrap intro">
+  <div class="read">
+    <h1 class="big">Your week, today and with the changes.</h1>
+    <p class="lead">Five ordinary moments from a recruiter's week. Flip the switch to see what each one would look like after the changes we suggest.</p>
+  </div>
+</div>
+
+<div class="switch">
+  <div class="wrap">
+    <div class="seg" role="group" aria-label="Show">
+      <button type="button" aria-pressed="true" data-set="today">Today</button>
+      <button type="button" aria-pressed="false" data-set="after" class="after-btn">With the changes</button>
+    </div>
+    <span class="muted small" data-when="today">Showing how it works today</span>
+    <span class="muted small" data-when="after">Showing how it would work</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <ol class="week">
+    <li class="moment">
+      <time>Monday<small>9:00</small></time>
+      <div>
+        <h3 data-when="today">Twelve new applications to copy into Excel.</h3>
+        <h3 data-when="after">Twelve new applications, already in the list.</h3>
+        <p data-when="today">You open each one on the website and type or paste it into the sheet. One of them is someone who already applied in spring.</p>
+        <p data-when="after">They arrived on their own overnight. The person who applied in spring is attached to their existing record, not added twice.</p>
+        <p class="fixby" data-when="after">Change: <a href="#">One list for everyone</a>, bigger job, 5 to 8 weeks</p>
+      </div>
+      <div class="scene"><span data-when="today">Row 212: Amina Hodzic, "to contact"<br>Row 14: Amina Hodžić, "working"</span><span data-when="after">Amina Hodžić: applied again. Works here since March. Not in your call list.</span></div>
+    </li>
+    <li class="moment">
+      <time>Monday<small>11:00</small></time>
+      <div>
+        <h3 data-when="today">Finding German speakers in Sarajevo.</h3>
+        <h3 data-when="after">Filtering for German speakers in Sarajevo.</h3>
+        <p data-when="today">Language, level and city are somewhere in each CV. You open them one by one.</p>
+        <p data-when="after">The form already asked for them. One filter shows everyone with German B2 or better who prefers Sarajevo.</p>
+        <p class="fixby" data-when="after">Change: <a href="#">Better applications</a>, small job, 1 to 2 weeks</p>
+      </div>
+      <div class="scene"><span data-when="today">12 CVs to open and read</span><span data-when="after">German, B2 or better, Sarajevo: 5 people</span></div>
+    </li>
+    <li class="moment">
+      <time>Tuesday<small>all day</small></time>
+      <div>
+        <h3 data-when="today">Who was I supposed to call back?</h3>
+        <h3 data-when="after">A short list of who to call today.</h3>
+        <p data-when="today">Follow-ups live in your head and in notes. Someone who did not answer last week slips through.</p>
+        <p data-when="after">The list reminds you: no answer for 7 days, an interview tomorrow, an offer with no reply. Messages are ready to send.</p>
+        <p class="fixby" data-when="after">Change: <a href="#">Reminders and messages</a>, medium job, 3 to 4 weeks</p>
+      </div>
+      <div class="scene"><span data-when="today">?</span><span data-when="after">3 to call today. 1 interview tomorrow.</span></div>
+    </li>
+    <li class="moment">
+      <time>Wednesday<small>14:00</small></time>
+      <div>
+        <h3 data-when="today">A Norwegian candidate, and nobody free to check.</h3>
+        <h3 data-when="after">A Norwegian candidate, checked without a call.</h3>
+        <p data-when="today">You need a colleague who speaks Norwegian, and a time that suits their shift and the candidate.</p>
+        <p data-when="after">The candidate recorded short answers online. A Norwegian-speaking colleague rated them in five minutes between calls.</p>
+        <p class="fixby" data-when="after">Change: <a href="#">Language check</a>, medium job, 3 to 4 weeks. If you already have a test, we build around it.</p>
+      </div>
+      <div class="scene"><span data-when="today">Waiting for a free colleague</span><span data-when="after">Norwegian: speaking B2, writing B2</span></div>
+    </li>
+    <li class="moment">
+      <time>Next Monday<small>9:00</small></time>
+      <div>
+        <h3 data-when="today">First day. Two people missing.</h3>
+        <h3 data-when="after">First day. You knew on Friday.</h3>
+        <p data-when="today">One is still missing documents, one did not answer the phone. The Excel says both are "employed".</p>
+        <p data-when="after">Their page showed who confirmed and who was missing documents, and you called them on Friday. On arrival they became "Working".</p>
+        <p class="fixby" data-when="after">Change: <a href="#">From yes to first day</a>, medium job, 3 to 4 weeks</p>
+      </div>
+      <div class="scene"><span data-when="today">"Employed": 8. Arrived: 6.</span><span data-when="after">Ready: 8 of 8. Working: 8.</span></div>
+    </li>
+  </ol>
+
+  <section class="sum">
+    <h2 class="mid" style="color:#fff">What it would take</h2>
+    <table>
+      <tr><td>Better applications</td><td>1 to 2 weeks</td></tr>
+      <tr><td>One list for everyone</td><td>5 to 8 weeks</td></tr>
+      <tr><td>Reminders and messages</td><td>3 to 4 weeks</td></tr>
+      <tr><td>Language check</td><td>3 to 4 weeks</td></tr>
+      <tr><td>From yes to first day</td><td>3 to 4 weeks</td></tr>
+    </table>
+  </section>
+</main>
+
+<div class="mock-banner">Mockup C: your week, before and after. <a href="index.html">All options</a></div>
+
+<script>
+document.querySelectorAll('[data-set]').forEach((b) => b.addEventListener('click', () => {
+  document.body.className = 'mock ' + b.dataset.set;
+  document.querySelectorAll('[data-set]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+}));
+</script>
+</body>
+</html>

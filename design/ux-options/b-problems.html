@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Option B: Start from your problem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mockups.css">
+<style>
+  .hero { background: var(--navy); color: #fff; padding-bottom: 3rem; }
+  .hero .lead { color: var(--on-navy-2); }
+  .hero .big { max-width: 16em; }
+
+  .problems { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .9rem; margin-top: -2rem; position: relative; }
+  .problem {
+    text-align: left; font: inherit; color: var(--ink); cursor: pointer;
+    background: #fff; border: 0; border-radius: var(--radius-l); padding: 1.2rem 1.2rem 1rem;
+    box-shadow: 0 0 0 1px var(--line), 0 12px 30px -18px rgba(2,24,67,.35);
+    display: flex; flex-direction: column; gap: .75rem; min-height: 11rem;
+    transition: box-shadow .15s, transform .15s;
+  }
+  .problem:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px var(--teal), 0 16px 30px -18px rgba(2,24,67,.45); }
+  .problem[aria-expanded="true"] { box-shadow: 0 0 0 2px var(--teal); }
+  .problem q { font-size: 1.125rem; font-weight: 600; line-height: 1.3; quotes: "\201C" "\201D"; }
+  .problem .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: .8125rem; color: var(--muted); }
+  .problem .seen { color: #13704f; font-weight: 600; }
+
+  .answer-panel { margin-top: 1.5rem; background: #fff; border-radius: var(--radius-l); box-shadow: 0 0 0 1px var(--line); padding: clamp(1.25rem, 3vw, 2rem); }
+  .answer-panel[hidden] { display: none; }
+  .answer-panel .head { display: flex; justify-content: space-between; gap: 1rem; align-items: start; }
+  .answer-panel .close { font: inherit; background: none; border: 0; color: var(--muted); cursor: pointer; font-size: .9375rem; }
+  .steps3 { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; counter-reset: s; }
+  .steps3 li { counter-increment: s; background: var(--paper); border-radius: var(--radius-m); padding: 1rem; }
+  .steps3 li::before { content: counter(s); display: inline-grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 700; font-size: .8125rem; margin-bottom: .5rem; }
+  .steps3 h4 { margin: 0 0 .25rem; font-size: 1rem; }
+  .steps3 p { margin: 0; color: var(--ink-2); font-size: .9375rem; }
+  @media (max-width: 800px) { .steps3 { grid-template-columns: 1fr; } }
+  .panel-foot { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+
+  .after { margin: 4rem 0 6rem; }
+  .plan { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; margin-top: 1rem; }
+  .plan div { background: #fff; border-radius: var(--radius-m); padding: 1rem; box-shadow: 0 0 0 1px var(--line); }
+  .plan b { display: block; }
+  @media (max-width: 800px) { .plan { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="mock">
+
+<header class="hero">
+  <div class="topline dark"><span><b>F Koncept</b> for the DDC Balkans recruitment team</span><span>About 5 minutes</span></div>
+  <div class="wrap" style="padding-top:2.5rem;padding-bottom:3rem">
+    <h1 class="big">Which of these happens in your week?</h1>
+    <p class="lead read">Pick one to see how we would fix it, what you would see, and what it takes. Then come back and pick another.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="problems" id="problems"></div>
+  <section class="answer-panel" id="panel" hidden aria-live="polite"></section>
+
+  <section class="after">
+    <h2 class="mid">Seen enough? Here is the order we suggest.</h2>
+    <p class="lead read">Start small, so the new list is filled with better data from day one.</p>
+    <div class="plan">
+      <div><b>First</b>Better applications<br><span class="muted small">1 to 2 weeks</span></div>
+      <div><b>Then</b>One list for everyone<br><span class="muted small">5 to 8 weeks</span></div>
+      <div><b>Later, if useful</b>Follow-ups, language check, first day<br><span class="muted small">3 to 4 weeks each</span></div>
+    </div>
+    <p style="margin-top:1.5rem"><a class="btn" href="#">Next step: one hour with your Excel</a></p>
+  </section>
+</main>
+
+<div class="mock-banner">Mockup B: start from your problem. <a href="index.html">All options</a></div>
+
+<script>
+(() => {
+  const P = [
+    { q: 'I copy every application into Excel, and the file keeps going out of date.', name: 'One list for everyone', level: 3, effort: 'Bigger job, about 5 to 8 weeks',
+      steps: [['Why it happens', 'A spreadsheet cannot notice that two rows are the same person, or that someone started work last month.'],
+              ['What we would change', 'Applications land in one shared list on their own. Each person exists once, with their history.'],
+              ['What you would see', 'A warning like "Already in your list: works here since March", instead of a second row.']],
+      link: '../../site/ideas/one-candidate-list.html' },
+    { q: 'I have to open every CV to find someone’s language, level and city.', name: 'Better applications', level: 1, effort: 'Small job, about 1 to 2 weeks',
+      steps: [['Why it happens', 'The website form only asks for name, email, phone, a short bio and a CV.'],
+              ['What we would change', 'Four more short questions on the form: languages and level, city, start date, and "keep me on file".'],
+              ['What you would see', 'You filter by "German, B2 or better, Sarajevo" instead of reading CVs.']],
+      link: '../../site/ideas/better-applications.html' },
+    { q: 'I lose track of who I still need to call back.', name: 'Reminders and ready-made messages', level: 2, effort: 'Medium job, about 3 to 4 weeks',
+      steps: [['Why it happens', 'Nothing reminds you. Follow-ups live in your head or in a colour in Excel.'],
+              ['What we would change', 'A "today" list: who is waiting, who did not answer, who has an interview.'],
+              ['What you would see', '"Selma, called 7 days ago, no answer", with a ready message one click away.']],
+      link: '../../site/ideas/talent-pool.html' },
+    { q: 'I can’t judge Norwegian or Czech myself, so I have to find a colleague.', name: 'Language check', level: 2, effort: 'Medium job, about 3 to 4 weeks',
+      steps: [['Why it happens', 'Every role needs a language level, and nobody speaks all eleven languages.'],
+              ['What we would change', 'Candidates record short answers online; a colleague who speaks the language rates them when it suits them.'],
+              ['What you would see', 'The level appears on the candidate’s record, without arranging a call. If you already have a test, we build around it.']],
+      link: '../../site/ideas/language-check.html' },
+    { q: 'People say yes, then documents go missing or they don’t show up.', name: 'From yes to first day', level: 2, effort: 'Medium job, about 3 to 4 weeks',
+      steps: [['Why it happens', 'Between the offer and the first day, everything runs on phone calls and emails.'],
+              ['What we would change', 'Each new hire gets one page: start date, what to bring, documents, and "I’ll be there".'],
+              ['What you would see', 'A board: "6 of 8 ready for Monday". On day one they become "Working".']],
+      link: '../../site/ideas/first-day.html' },
+  ];
+  const grid = document.getElementById('problems');
+  const panel = document.getElementById('panel');
+  const seen = new Set();
+  const el = (t, a = {}, ...k) => { const e = document.createElement(t); Object.entries(a).forEach(([x, v]) => x === 'class' ? e.className = v : e.setAttribute(x, v)); k.forEach((c) => e.append(c)); return e; };
+  const render = () => {
+    grid.replaceChildren(...P.map((p, i) => {
+      const b = el('button', { class: 'problem', type: 'button', 'aria-expanded': String(panel.dataset.i == i), 'aria-controls': 'panel' },
+        el('q', {}, p.q),
+        el('span', { class: 'foot' }, el('span', {}, seen.has(i) ? '' : 'See the fix'), el('span', { class: 'seen' }, seen.has(i) ? 'Seen' : '')));
+      b.onclick = () => open(i);
+      return b;
+    }));
+  };
+  const open = (i) => {
+    const p = P[i];
+    seen.add(i); panel.dataset.i = i; panel.hidden = false;
+    const meter = el('span', { class: 'meter', 'data-level': String(p.level) }, el('span', { class: 'bars' }, el('i'), el('i'), el('i')), p.effort);
+    const close = el('button', { class: 'close', type: 'button' }, 'Close');
+    close.onclick = () => { panel.hidden = true; delete panel.dataset.i; render(); };
+    const link = el('a', { class: 'btn light small ext', href: p.link, target: '_blank', rel: 'noopener' }, 'See it in detail');
+    panel.replaceChildren(
+      el('div', { class: 'head' }, el('div', {}, el('p', { class: 'muted small', style: 'margin:0 0 .25rem' }, 'Our fix'), el('h2', { class: 'mid', style: 'margin:0' }, p.name)), close),
+      el('ol', { class: 'steps3' }, ...p.steps.map(([h, t]) => el('li', {}, el('h4', {}, h), el('p', {}, t)))),
+      el('div', { class: 'panel-foot' }, meter, link),
+    );
+    render();
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  };
+  render();
+})();
+</script>
+</body>
+</html>

@@ -12,11 +12,11 @@ move its story to `PROGRESS.md` and delete it here.
       (the DDC site is English). Should there also be a Bosnian/Serbian version?
 - [ ] **Pricing.** The site shows difficulty and rough effort only, no prices. Do we
       want price ranges on the site, or only in the meeting?
-- [ ] **Order and framing.** The deck leads with three core proposals (candidate list,
-      better applications, talent pool) and shows language check and first day as
-      "two more, for later". Confirm this framing before sending.
-- [ ] **Push** the proposals 4 and 5 commit when the user is happy (committed, not
-      pushed, on 2026-09-23).
+- [ ] **Push** when the user is happy. Committed but not pushed on 2026-09-23:
+      proposals 4 and 5, and the walkthrough redesign. The live site still shows the
+      old 11-slide deck until then.
+- [ ] **Alone or presented?** Not decided yet. The walkthrough supports both; if it
+      will be presented, consider a short presenter note.
 - [x] ~~Who builds proposal 1?~~ Answered 2026-09-23: the user and Claude together.
 - [x] ~~Is F Koncept willing to host candidate data?~~ Answered 2026-09-23: yes, if the
       client agrees (data processing agreement and paid support).

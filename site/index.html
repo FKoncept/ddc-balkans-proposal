@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>One Candidate, One Record | Proposal for The DDC Group Balkans</title>
-<meta name="description" content="Three proposals from F Koncept for the recruitment team at The DDC Group Balkans.">
+<meta name="description" content="A step-by-step proposal from F Koncept for the recruitment team at The DDC Group Balkans.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#021843">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,425 +12,381 @@
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23021843'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%231F8093' stroke-width='3'/%3E%3C/svg%3E">
+<noscript><style>.screen[hidden]{display:block!important}.w-nav,.chapters,.progress{display:none!important}.screen{margin-bottom:4rem}</style></noscript>
 </head>
-<body class="deck-page on-navy">
+<body class="walk is-welcome">
 
-<header class="brandbar">
-  <a class="wordmark" href="#start"><b>F Koncept</b><span>for The DDC Group Balkans</span></a>
+<header class="w-top">
+  <div class="w-wrap">
+    <div class="row">
+      <a class="w-brand" href="#start"><b>F Koncept</b> for The DDC Group Balkans</a>
+      <span class="w-time">About 5 minutes to read</span>
+    </div>
+    <nav aria-label="Chapters"><ol class="chapters" id="chapters"></ol></nav>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="progress"></i></div>
 </header>
 
-<nav aria-label="Slides">
-  <ol class="rail" id="rail"></ol>
-</nav>
+<main class="stage" id="stage">
 
-<main class="deck" id="deck">
-
-  <!-- 1. Opening -->
-  <section class="slide" id="start" data-title="Start">
-    <div class="slide-inner split even">
-      <div>
-        <p class="kicker">A proposal for the recruitment team</p>
-        <h1>One candidate. One record. Always current.</h1>
-        <p class="lede">Today every application is copied by hand into one big Excel file, and the file slowly stops matching reality. Here are three ways to fix that, two more ideas for later, and what each one would take.</p>
-        <div class="actions">
-          <a class="btn" href="#today">Start the walkthrough</a>
-          <a class="btn ghost" href="#proposals">Skip to the proposals</a>
-        </div>
-        <p class="fine" style="margin-top:2rem">Prepared by F Koncept, Sarajevo. September 2026.<br>Scroll, or use the arrow keys, to move between slides.</p>
+  <!-- Welcome -->
+  <section class="screen" id="start" data-title="Start" data-ch="-1" tabindex="-1" aria-labelledby="h-start">
+    <div class="w-wrap">
+      <p class="w-kicker">A proposal for the recruitment team</p>
+      <h1 class="w-h1" id="h-start">Less copying, fewer mix&#8209;ups, and one candidate list you can trust.</h1>
+      <p class="w-lead">We looked at how job applications reach you and where time gets lost. This walks you through what we would change, one step at a time, and what each change would take.</p>
+      <p class="w-note">Nothing is decided: you pick what is useful. All names in the examples are made up.</p>
+      <div class="w-actions">
+        <button class="btn big" type="button" data-go="today">Start</button>
+        <button class="btn ghost" type="button" data-go="idea">Skip to the five changes</button>
       </div>
-
-      <div>
-        <div class="merge" id="merge">
-          <div class="sheet" aria-hidden="true">
-            <div class="sheet-head"><span></span><span>Name</span><span>Language</span><span>Status</span><span>Updated</span></div>
-            <div class="sheet-row ghost"><span>13</span><span>Marko Petrović</span><span>Dutch</span><span>Interview</span><span>02/04</span></div>
-            <div class="sheet-row clash"><span>14</span><span>Amina Hodžić</span><span>German</span><span class="st">To contact</span><span>11/02</span></div>
-            <div class="sheet-row ghost"><span>15</span><span>Lejla Begić</span><span>Italian</span><span>Rejected</span><span>14/02</span></div>
-            <div class="sheet-gap"></div>
-            <div class="sheet-row ghost"><span>211</span><span>Stefan Jovanović</span><span>French</span><span>Contacted</span><span>08/03</span></div>
-            <div class="sheet-row clash"><span>212</span><span>Amina Hodzic</span><span>German, English</span><span class="st">Working</span><span>12/03</span></div>
-            <div class="sheet-row ghost"><span>213</span><span>Emina Kovačević</span><span>Swedish</span><span>No answer</span><span>15/03</span></div>
-          </div>
-          <div class="clash-note" aria-hidden="true">
-            <span>Rows 14 and 212 are the same person. One says "to contact", the other says she already works here.</span>
-          </div>
-
-          <article class="record" aria-label="The same candidate as one record">
-            <div class="record-top">
-              <div class="avatar">AH</div>
-              <div>
-                <h3>Amina Hodžić</h3>
-                <div class="sub">amina.h@example.com, applied twice</div>
-              </div>
-              <span class="chip working">Working</span>
-            </div>
-            <dl>
-              <div><dt>Languages</dt><dd>German C1, English B2</dd></div>
-              <div><dt>Office</dt><dd>Sarajevo</dd></div>
-              <div><dt>Started</dt><dd class="num">12 Mar 2026</dd></div>
-            </dl>
-            <div class="guard">Hidden from call lists while she works here.</div>
-          </article>
-        </div>
-        <button class="replay" id="replay" type="button">Replay</button>
-        <p class="fine">Names and data in every example are made up.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. Today -->
-  <section class="slide" id="today" data-title="How it works today">
-    <div class="slide-inner">
-      <p class="kicker">How it works today</p>
-      <h2>Two steps run on their own. Three depend on one person's memory.</h2>
-      <ol class="flow">
-        <li><strong>A candidate applies</strong><span>On the careers site, through the WP Job Openings form.</span></li>
-        <li><strong>WordPress stores it</strong><span>Name, email, phone, bio and CV land in the site's admin.</span></li>
-        <li class="hand"><strong>Copied into Excel</strong><span>Each application is retyped or pasted into the big sheet.</span></li>
-        <li class="hand"><strong>Statuses updated</strong><span>Contacted, employed, working, not working: all edited by hand.</span></li>
-        <li class="hand"><strong>The sheet drifts</strong><span>Nothing checks it, so it slowly stops matching reality.</span></li>
+      <ol class="inside" aria-label="What's inside">
+        <li><b>How it works today</b>Your process in three steps</li>
+        <li><b>The idea</b>One list that fills and checks itself</li>
+        <li><b>Five changes</b>Each with a before and after</li>
+        <li><b>Your choice</b>Tick what would help</li>
+        <li><b>Next step</b>One hour, with your Excel open</li>
       </ol>
-      <div class="symptoms">
-        <div class="symptom"><b>Contacted, but already working</b>An older row still says "to contact" for someone who started last month.</div>
-        <div class="symptom"><b>Left, then contacted again</b>Someone quits, nobody updates the row, and they get a call about a new role.</div>
-        <div class="symptom"><b>One person, several rows</b>Applying for German support and then for B2B sales creates two separate people.</div>
-      </div>
     </div>
   </section>
 
-  <!-- 3. Findings -->
-  <section class="slide" id="findings" data-title="What we noticed">
-    <div class="slide-inner split">
-      <div>
-        <p class="kicker">What we noticed on the careers site</p>
-        <h2>The site works. A few details make the recruiter's job harder.</h2>
-        <p>We only looked at the public pages of balkans.theddcgroup.com. Nothing here needs a new website: each item is a small, contained fix.</p>
-      </div>
-      <div class="findings">
-        <article class="finding">
-          <div class="thumb poster" aria-hidden="true"><b>WE ARE</b><b>HIRING!</b><i></i><i></i><i></i><i style="width:70%"></i><i></i><i style="width:60%"></i></div>
-          <div>
-            <h3>Job ads are pictures</h3>
-            <p>Each ad is a single poster image with no text version. Google, screen readers and translation tools cannot read "German, minimum B2", duties or benefits.</p>
-          </div>
-        </article>
-        <article class="finding">
-          <div class="thumb mini-form" aria-hidden="true">Name<i></i>Phone<i></i>Language level<i class="missing"></i>City<i class="missing"></i></div>
-          <div>
-            <h3>The form asks for five things</h3>
-            <p>Name, email, phone, bio and CV. It does not ask which languages and at what level, which city, or when someone can start, so the list cannot be filtered by any of those.</p>
-          </div>
-        </article>
-        <article class="finding">
-          <div class="thumb typo" aria-hidden="true"><span><s>norvegian</s> language</span><span><s>Colarado</s></span><span>Metro <s>Manilla</s></span></div>
-          <div>
-            <h3>Small typos in public places</h3>
-            <p>The job filter lists "norvegian language", and the footer says "Colarado" and "Metro Manilla". Minutes to fix, but candidates notice.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Three proposals -->
-  <section class="slide" id="proposals" data-title="Three proposals">
-    <div class="slide-inner">
-      <p class="kicker">Three proposals</p>
-      <h2>One fix for the list, one for what goes into it, one for what comes out.</h2>
-      <div class="three">
-        <article class="proposal" style="--bar: var(--teal)">
-          <h3>One candidate list</h3>
-          <p>Applications flow from the website into one shared list automatically. One record per person, statuses with history, and guardrails against calling the wrong people.</p>
-          <dl class="facts">
-            <div><dt>Difficulty</dt><dd><span class="meter" data-level="3"><span class="bars"><i></i><i></i><i></i></span>Medium to high</span></dd></div>
-            <div><dt>Rough effort</dt><dd>5 to 8 weeks</dd></div>
-            <div><dt>Fixes</dt><dd>The Excel problem</dd></div>
-          </dl>
-          <a class="btn small ext" href="ideas/one-candidate-list.html" target="_blank" rel="noopener">Open details</a>
-        </article>
-        <article class="proposal" style="--bar: var(--green)">
-          <h3>Better applications</h3>
-          <p>A few more questions on the form, job ads as real text, and an automatic "we received your application" email in reply.</p>
-          <dl class="facts">
-            <div><dt>Difficulty</dt><dd><span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Low</span></dd></div>
-            <div><dt>Rough effort</dt><dd>1 to 2 weeks</dd></div>
-            <div><dt>Fixes</dt><dd>Missing information</dd></div>
-          </dl>
-          <a class="btn small ext" href="ideas/better-applications.html" target="_blank" rel="noopener">Open details</a>
-        </article>
-        <article class="proposal" style="--bar: var(--lavender)">
-          <h3>Talent pool and follow-ups</h3>
-          <p>Reminders so nobody is forgotten, ready-made messages, and a shortlist of past applicants whenever a new role opens.</p>
-          <dl class="facts">
-            <div><dt>Difficulty</dt><dd><span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Medium</span></dd></div>
-            <div><dt>Rough effort</dt><dd>3 to 4 weeks</dd></div>
-            <div><dt>Fixes</dt><dd>Lost follow-ups</dd></div>
-          </dl>
-          <a class="btn small ext" href="ideas/talent-pool.html" target="_blank" rel="noopener">Open details</a>
-        </article>
-      </div>
-      <p class="deps">"Better applications" can start on its own. "Talent pool" builds on "One candidate list". Two more options for later follow after proposal 3. Effort is a rough range and firms up after we see the real Excel columns.</p>
-    </div>
-  </section>
-
-  <!-- 5. Proposal 1 -->
-  <section class="slide" id="p1" data-title="One candidate list">
-    <div class="slide-inner split">
-      <div style="--bar: var(--teal-light)">
-        <p class="kicker">Proposal 1</p>
-        <h2>One candidate list</h2>
-        <p class="lede">Every application arrives on its own. Every person exists once. Every status change shows who made it and when.</p>
-        <ul class="points">
-          <li><b>No more copying.</b> New applications appear in the list within minutes of being sent.</li>
-          <li><b>One record per person.</b> A second application from the same email or phone is added to the existing record, not a new row.</li>
-          <li><b>Guardrails.</b> People marked working or do-not-contact never show up in "to contact" lists.</li>
-          <li><b>Your Excel comes with you.</b> We import it, and you confirm the likely duplicates we find.</li>
-        </ul>
-        <div class="meta-row">
-          <span class="meter" data-level="3"><span class="bars"><i></i><i></i><i></i></span>Medium to high</span>
-          <span class="effort">Rough effort <b>5 to 8 weeks</b></span>
-        </div>
-        <div class="actions"><a class="btn ext" href="ideas/one-candidate-list.html" target="_blank" rel="noopener">Try the demo and read more</a></div>
-      </div>
-      <div class="window" aria-label="Mockup of the candidate list">
-        <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">Candidates</span><span class="sample">Sample data</span></div>
-        <div class="window-body">
-          <div class="mock-toolbar">
-            <span class="mock-search">Search name, email or phone</span>
-            <span class="filter-pill on">German</span><span class="filter-pill">Sarajevo</span><span class="filter-pill">To contact</span>
-          </div>
-          <div class="alert warn"><span><b>Already in your list.</b> Amina Hodžić applied again today. She has worked here since 12 Mar 2026, so she was not added to "to contact".</span></div>
-          <div class="table-wrap">
-            <table class="list">
-              <thead><tr><th>Candidate</th><th>Languages</th><th>City</th><th>Status</th></tr></thead>
-              <tbody>
-                <tr><td class="who">Tarik Hadžić<span class="sub">Applied 21 Sep</span></td><td>German C1</td><td>Sarajevo</td><td><span class="chip new">New</span></td></tr>
-                <tr><td class="who">Jelena Marković<span class="sub">Applied 19 Sep</span></td><td>German B2, English C1</td><td>Belgrade</td><td><span class="chip progress">Interview</span></td></tr>
-                <tr><td class="who">Selma Mujić<span class="sub">Applied 12 Sep</span></td><td>German B2</td><td>Sarajevo</td><td><span class="chip progress">Contacted</span></td></tr>
-                <tr><td class="who">Amina Hodžić<span class="sub">2 applications</span></td><td>German C1, English B2</td><td>Sarajevo</td><td><span class="chip working">Working</span></td></tr>
-                <tr><td class="who">Nikola Ilić<span class="sub">Left 30 Jun</span></td><td>German B2</td><td>Belgrade</td><td><span class="chip closed">Left</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. Proposal 2 -->
-  <section class="slide" id="p2" data-title="Better applications">
-    <div class="slide-inner split">
-      <div style="--bar: var(--green-light)">
-        <p class="kicker">Proposal 2</p>
-        <h2>Better applications</h2>
-        <p class="lede">Ask for what you filter by, write ads that can be read, and answer every applicant straight away.</p>
-        <ul class="points">
-          <li><b>Four new form fields.</b> Languages with level, preferred city, earliest start date, and consent to be kept on file for future roles.</li>
-          <li><b>Job ads as real text.</b> Your poster stays as the picture; the requirements, duties and benefits become readable text underneath.</li>
-          <li><b>Correct job data for Google.</b> The job details the site already sends to Google get the real ad text instead of an image tag.</li>
-          <li><b>Automatic confirmation email</b> telling the candidate what happens next.</li>
-        </ul>
-        <div class="meta-row">
-          <span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Low</span>
-          <span class="effort">Rough effort <b>1 to 2 weeks</b></span>
-        </div>
-        <div class="actions"><a class="btn ext" href="ideas/better-applications.html" target="_blank" rel="noopener">See the new form and ad</a></div>
-      </div>
-      <div class="window" aria-label="Mockup of the improved application form">
-        <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">Apply: German language, Customer Support Agent</span></div>
-        <div class="window-body">
-          <div class="form-mock">
-            <div class="grid2">
-              <label>Full name<span class="input">Tarik Hadžić</span></label>
-              <label>Email<span class="input">tarik.h@example.com</span></label>
-            </div>
-            <label class="new-field">Languages and level <span class="newtag">New</span><span class="input"><span class="tag">German C1</span><span class="tag">English B2</span></span></label>
-            <div class="grid2">
-              <label class="new-field">Preferred city <span class="newtag">New</span><span class="input">Sarajevo</span></label>
-              <label class="new-field">Can start from <span class="newtag">New</span><span class="input num">1 Oct 2026</span></label>
-            </div>
-            <label class="check new-field"><span class="box"></span><span>Keep my application on file for other roles for 12 months. <span class="newtag">New</span></span></label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. Proposal 3 -->
-  <section class="slide" id="p3" data-title="Talent pool">
-    <div class="slide-inner split">
-      <div style="--bar: var(--lavender-light)">
-        <p class="kicker">Proposal 3</p>
-        <h2>Talent pool and follow-ups</h2>
-        <p class="lede">The list tells you who needs a call today, and who to call first when a new language opens up.</p>
-        <ul class="points">
-          <li><b>Reminders.</b> "Contacted 7 days ago, no answer yet" appears on its own, so nobody is forgotten.</li>
-          <li><b>Ready-made messages.</b> Invite, reminder, rejection and "we'll keep you in mind", filled in with the person's name and role.</li>
-          <li><b>Shortlist for new roles.</b> Opening a Dutch role shows past Dutch-speaking applicants who can be contacted again.</li>
-          <li><b>Housekeeping.</b> A monthly list of records past your retention period, ready to delete or renew.</li>
-        </ul>
-        <div class="meta-row">
-          <span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Medium</span>
-          <span class="effort">Rough effort <b>3 to 4 weeks</b>, after proposal 1</span>
-        </div>
-        <div class="actions"><a class="btn ext" href="ideas/talent-pool.html" target="_blank" rel="noopener">See how it works</a></div>
-      </div>
-      <div class="window" aria-label="Mockup of the follow-up view">
-        <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">Today</span><span class="sample">Sample data</span></div>
-        <div class="window-body">
-          <div class="tasks">
-            <div class="task"><span class="box"></span><span><b>Selma Mujić</b> contacted 7 days ago, no answer</span><span class="when">Follow up</span></div>
-            <div class="task"><span class="box"></span><span><b>Jelena Marković</b> interview tomorrow at 10:00</span><span class="when">Reminder</span></div>
-            <div class="task"><span class="box"></span><span><b>Tarik Hadžić</b> new application, not opened yet</span><span class="when">2 days</span></div>
-          </div>
-          <div class="match-card">
-            <h4>New role: Dutch language, Customer Support Agent</h4>
-            <p>6 past applicants speak Dutch B2 or higher, are not working here, and agreed to be kept on file.</p>
-            <div class="stack"><span style="background:#1f8093">MP</span><span style="background:#827493">LB</span><span style="background:#20a47a">AN</span><span style="background:#13336b">DO</span><span style="background:#c02a7e">+2</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. Two more, for later -->
-  <section class="slide" id="later" data-title="Two more, for later">
-    <div class="slide-inner">
-      <p class="kicker">Two more, for later</p>
-      <h2>Checking languages, and the days after a yes.</h2>
-      <div class="later">
-        <article class="proposal" style="--bar: var(--raspberry)">
-          <h3>Language check</h3>
-          <p>Candidates record short spoken answers and write one reply in the language of the role. A colleague who speaks it rates the level in about five minutes, and the result lands on the record.</p>
-          <div class="window" aria-label="Mockup of a language check review">
-            <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">Review: Norwegian, candidate N-014</span><span class="sample">Sample</span></div>
-            <div class="window-body">
-              <div class="answer"><span class="play"></span><span class="wave" aria-hidden="true"><i style="height:37%"></i><i style="height:92%"></i><i style="height:28%"></i><i style="height:52%"></i><i style="height:35%"></i><i style="height:83%"></i><i style="height:77%"></i><i style="height:80%"></i><i style="height:68%"></i><i style="height:46%"></i><i style="height:32%"></i><i style="height:82%"></i><i style="height:23%"></i><i style="height:69%"></i><i style="height:75%"></i><i style="height:97%"></i><i style="height:20%"></i><i style="height:77%"></i><i style="height:54%"></i><i style="height:49%"></i><i style="height:95%"></i><i style="height:33%"></i><i style="height:60%"></i><i style="height:23%"></i><i style="height:22%"></i><i style="height:23%"></i><i style="height:89%"></i><i style="height:21%"></i><i style="height:68%"></i><i style="height:47%"></i><i style="height:74%"></i><i style="height:23%"></i><i style="height:87%"></i><i style="height:48%"></i></span><span class="dur">0:48</span></div>
-              <div class="levels" style="margin-top:.6rem"><span>Below B1</span><span>B1</span><span class="on">B2</span><span>C1</span><span>C2</span></div>
-            </div>
-          </div>
-          <p class="note-line">You probably test languages already. If so, we build around your test instead of replacing it.</p>
-          <div class="meta-row" style="margin:0 0 1rem"><span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Medium</span><span class="effort">Rough effort <b>3 to 4 weeks</b></span></div>
-          <a class="btn small ext" href="ideas/language-check.html" target="_blank" rel="noopener">Open details</a>
-        </article>
-        <article class="proposal" style="--bar: var(--teal-light)">
-          <h3>From yes to first day</h3>
-          <p>Each new hire gets a personal page: start date, what to bring, documents to upload and an "I'm coming" button. You see who is ready, and day one moves them to "Working", which fixes the "employed" versus "working" mix-up at the source.</p>
-          <div class="window" aria-label="Mockup of the first day board">
-            <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">Starting Monday 5 October</span><span class="sample">Sample</span></div>
-            <div class="window-body">
-              <div class="tasks">
-                <div class="task"><span><b>6 of 8</b> ready: documents in, start confirmed</span><span class="chip working">Ready</span></div>
-                <div class="task"><span><b>2</b> still missing documents</span><span class="chip closed">Missing</span></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="meta-row" style="margin:0 0 1rem"><span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Medium</span><span class="effort">Rough effort <b>3 to 4 weeks</b>, best with proposal 1</span></div>
-          <a class="btn small ext" href="ideas/first-day.html" target="_blank" rel="noopener">Open details</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. Quick wins -->
-  <section class="slide" id="more" data-title="Smaller ideas">
-    <div class="slide-inner">
-      <p class="kicker">Smaller ideas</p>
-      <h2>Things worth doing alongside, each small on its own.</h2>
-      <div class="wins">
-        <div class="win"><h3>Site tidy-up</h3><span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Low</span><p>Fix the typos, make the job category names consistent, add alt text to the ad images.</p></div>
-        <div class="win"><h3>Interview booking link</h3><span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Low</span><p>Candidates pick a free slot themselves, using Microsoft Bookings or a similar tool you may already have.</p></div>
-        <div class="win"><h3>"Know someone?" referral page</h3><span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Low</span><p>A simple page your team can share when a hard language like Norwegian or Czech is open.</p></div>
-        <div class="win"><h3>Chat buttons on each record</h3><span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Low</span><p>One click opens WhatsApp or Viber with the number filled in. Part of proposal 1 at no extra effort.</p></div>
-        <div class="win"><h3>"What happens after you apply" page</h3><span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Low</span><p>The steps, rough timings and what to prepare, linked from every ad. Fewer "any news?" calls.</p></div>
-        <div class="win"><h3>"Life at DDC" careers content</h3><span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Medium</span><p>Real people, the office and a day in each role on the careers page. This is F Koncept's core work.</p></div>
-      </div>
-      <div class="actions"><a class="btn small ext" href="ideas/smaller-ideas.html" target="_blank" rel="noopener">Read the details</a></div>
-    </div>
-  </section>
-
-  <!-- 10. Order -->
-  <section class="slide" id="order" data-title="Suggested order">
-    <div class="slide-inner">
-      <p class="kicker">Suggested order</p>
-      <h2>Start small, so the new list is filled with better data from day one.</h2>
-      <ol class="road">
-        <li style="--bar: var(--green-light)"><div><h3>Better applications</h3><p>New form fields, text job ads, confirmation email, site tidy-up.</p></div><div class="when"><b>1 to 2 weeks</b>Low</div></li>
-        <li style="--bar: var(--teal-light)"><div><h3>One candidate list</h3><p>Import the Excel, connect WordPress, then two weeks of using it side by side before Excel retires.</p></div><div class="when"><b>5 to 8 weeks</b>Medium to high</div></li>
-        <li style="--bar: var(--lavender-light)"><div><h3>Talent pool and follow-ups</h3><p>Reminders, templates, shortlists and housekeeping on top of the list.</p></div><div class="when"><b>3 to 4 weeks</b>Medium</div></li>
+  <!-- Today -->
+  <section class="screen" id="today" data-title="How it works today" data-ch="0" tabindex="-1" aria-labelledby="h-today" hidden>
+    <div class="w-wrap w-read">
+      <p class="w-kicker">How it works today</p>
+      <h2 class="w-h2" id="h-today">Three steps, and two of them are done by hand.</h2>
+      <ol class="flow3">
+        <li><b>Someone applies</b><span>on the careers website</span></li>
+        <li class="hand"><b>You copy it into Excel</b><span>by hand, one by one</span></li>
+        <li class="hand"><b>You keep each status up to date</b><span>by hand, from memory</span></li>
       </ol>
-      <p class="deps">Each step is useful on its own, and you can stop after any of them. Steps 1 and 2 need permission to add a small plugin to the WordPress site. The language check and "from yes to first day" can be added at any point after step 2, each about 3 to 4 weeks. All effort figures are rough until we have seen your Excel and talked to whoever manages the website.</p>
+      <p class="w-lead">Everything lives in one big file that nothing checks, so it slowly stops matching reality. For example:</p>
+      <ul class="issues">
+        <li>Someone who already works here is still marked "to contact".</li>
+        <li>Someone who left gets a call about a new job.</li>
+        <li>The same person is in the file twice, because they applied for two jobs.</li>
+      </ul>
+      <p class="w-note" style="margin-top:1rem">This is based on what we were told about your process. If yours is different, that is exactly what we want to hear.</p>
     </div>
   </section>
 
-  <!-- 11. Promises -->
-  <section class="slide" id="honest" data-title="What we promise">
-    <div class="slide-inner">
-      <p class="kicker">Straight answers</p>
-      <h2>What we promise, and what we don't.</h2>
-      <div class="promise-cols">
-        <div style="--c: var(--green-light)">
+  <!-- The idea -->
+  <section class="screen" id="idea" data-title="The idea" data-ch="1" tabindex="-1" aria-labelledby="h-idea" hidden>
+    <div class="w-wrap w-split">
+      <div>
+        <p class="w-kicker">The idea</p>
+        <h2 class="w-h2" id="h-idea">One list that fills itself and checks itself.</h2>
+        <p class="w-lead">Every application lands in one shared list on its own. Each person exists once, with their whole history, and the list warns you before you contact the wrong person.</p>
+        <p class="w-lead">Around that list we suggest five changes. Each one fixes one problem. You can take one, some, or all of them.</p>
+        <p class="w-note">Pick one to jump straight to it, or press Next to go through them in order.</p>
+      </div>
+      <ol class="five" id="five">
+        <li><button type="button" data-go="change-1"><span class="n">1</span><span><b>One candidate list</b><small>No more copying, no more duplicates</small></span><span class="size">Bigger job</span></button></li>
+        <li><button type="button" data-go="change-2"><span class="n">2</span><span><b>Better applications</b><small>Language, level and city without opening the CV</small></span><span class="size">Small job</span></button></li>
+        <li><button type="button" data-go="change-3"><span class="n">3</span><span><b>Talent pool and follow-ups</b><small>Nobody forgotten, past applicants found again</small></span><span class="size">Medium job</span></button></li>
+        <li><button type="button" data-go="change-4"><span class="n">4</span><span><b>Language check</b><small>Levels checked by your colleagues, without a call</small></span><span class="size">Medium job</span></button></li>
+        <li><button type="button" data-go="change-5"><span class="n">5</span><span><b>From yes to first day</b><small>Documents, start dates and day one in one place</small></span><span class="size">Medium job</span></button></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Change 1 -->
+  <section class="screen" id="change-1" data-title="Change 1: One candidate list" data-ch="2" tabindex="-1" aria-labelledby="h-c1" hidden>
+    <div class="w-wrap w-split">
+      <div>
+        <p class="w-kicker">Change 1 of 5: One candidate list</p>
+        <h2 class="w-h2" id="h-c1">No more copying, and no more duplicates.</h2>
+        <p class="said">I copy every application into Excel, and the file keeps going out of date. Sometimes the same person is in there twice, with two different statuses.</p>
+        <dl class="pce">
+          <div><dt>What changes</dt><dd>Applications appear in one shared list on their own. When someone applies again, it is added to their existing record. People who work here, or asked not to be contacted, never appear in your call list.</dd></div>
+          <div><dt>What it takes</dt><dd><span class="meter" data-level="3"><span class="bars"><i></i><i></i><i></i></span>Bigger job</span> <span class="muted">about 5 to 8 weeks</span></dd></div>
+          <div><dt>What we need</dt><dd>Permission to add a small add-on to your careers website</dd></div>
+        </dl>
+        <details class="more"><summary>How does it work behind the scenes?</summary><div class="inner">
+          <p>A small add-on on the careers website (WordPress) sends each new application, CV included, to the list the moment it arrives. Candidates see no change.</p>
+          <p>Your existing Excel is imported once. Possible duplicates are shown side by side, and you decide which are the same person. Nothing is merged on our guess.</p>
+          <p>The list works in any browser, stores data in the EU, and you can download everything to Excel at any time.</p>
+        </div></details>
+        <div class="w-actions" style="margin-top:.5rem"><a class="btn light ext" href="ideas/one-candidate-list.html" target="_blank" rel="noopener">Try the working demo</a></div>
+      </div>
+      <div>
+        <div class="scene" data-scene>
+          <div class="scene-switch" role="group" aria-label="Show"><button type="button" data-pane="today" aria-pressed="true">Today</button><button type="button" data-pane="after" aria-pressed="false">With this change</button></div>
+          <div class="pane" data-pane="today">
+            <span class="cap">Today, in Excel</span>
+            <div class="sheet" role="img" aria-label="Two spreadsheet rows for the same person with different statuses">
+              <div class="sheet-row head"><span></span><span>Name</span><span>Language</span><span>Status</span></div>
+              <div class="sheet-row ghost"><span>13</span><span>Marko Petrović</span><span>Dutch</span><span>Interview</span></div>
+              <div class="sheet-row clash"><span>14</span><span>Amina Hodžić</span><span>German</span><span class="st">To contact</span></div>
+              <div class="sheet-row ghost"><span>15</span><span>Lejla Begić</span><span>Italian</span><span>Rejected</span></div>
+              <div class="sheet-row clash"><span>212</span><span>Amina Hodzic</span><span>German</span><span class="st">Working</span></div>
+            </div>
+            <p class="scene-hint">Rows 14 and 212 are the same person, with two different answers.</p>
+          </div>
+          <div class="pane" data-pane="after" hidden>
+            <span class="cap">With the new list</span>
+            <div class="alert warn"><span><b>Already in your list.</b> Amina Hodžić applied again today. She has worked here since March, so she was not added to "to contact".</span></div>
+            <div class="person"><span class="avatar">AH</span><span><b>Amina Hodžić</b><br><span class="muted">German C1, applied twice</span></span><span class="chip working">Working</span></div>
+          </div>
+        </div>
+        <p class="scene-hint">Flip between "Today" and "With this change" to see the difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Change 2 -->
+  <section class="screen" id="change-2" data-title="Change 2: Better applications" data-ch="2" tabindex="-1" aria-labelledby="h-c2" hidden>
+    <div class="w-wrap w-split">
+      <div>
+        <p class="w-kicker">Change 2 of 5: Better applications</p>
+        <h2 class="w-h2" id="h-c2">Know someone's language, level and city without opening their CV.</h2>
+        <p class="said">I have to open every CV to find out which language someone speaks, how well, and which city they want.</p>
+        <dl class="pce">
+          <div><dt>What changes</dt><dd>The form asks four more short questions: languages and level, preferred city, start date, and whether they want to stay on file for other jobs. Every applicant also gets a short "we received your application" email.</dd></div>
+          <div><dt>What it takes</dt><dd><span class="meter" data-level="1"><span class="bars"><i></i><i></i><i></i></span>Small job</span> <span class="muted">about 1 to 2 weeks</span></dd></div>
+          <div><dt>What we need</dt><dd>Access to your careers website</dd></div>
+        </dl>
+        <details class="more"><summary>What we noticed on your careers website</summary><div class="inner">
+          <p>Each job ad is one poster image. Phones, translation tools and Google cannot read the text inside it, including "German, minimum B2". We would add the same text under the poster, which stays.</p>
+          <p>The job filter says "norvegian language", and the footer has "Colarado" and "Metro Manilla". We would fix those too.</p>
+        </div></details>
+        <details class="more"><summary>How does it work behind the scenes?</summary><div class="inner">
+          <p>Your job plugin (WP Job Openings) already supports extra form fields and an automatic reply in its free version. Nothing to buy; we set it up and write the wording with you.</p>
+        </div></details>
+        <div class="w-actions" style="margin-top:.5rem"><a class="btn light ext" href="ideas/better-applications.html" target="_blank" rel="noopener">See the new form and ad</a></div>
+      </div>
+      <div>
+        <div class="scene" data-scene>
+          <div class="scene-switch" role="group" aria-label="Show"><button type="button" data-pane="today" aria-pressed="true">Today</button><button type="button" data-pane="after" aria-pressed="false">With this change</button></div>
+          <div class="pane" data-pane="today">
+            <span class="cap">Today's form</span>
+            <div class="form-mock" style="padding:0">
+              <div class="grid2"><label>Full name<span class="input">Tarik Hadžić</span></label><label>Email<span class="input">tarik.h@example.com</span></label></div>
+              <div class="grid2"><label>Phone<span class="input">+387 61 ••• 222</span></label><label>CV<span class="input">cv.pdf</span></label></div>
+              <label>Bio<span class="input">Two years in customer support...</span></label>
+            </div>
+            <p class="scene-hint">Language, level and city: somewhere inside the CV.</p>
+          </div>
+          <div class="pane" data-pane="after" hidden>
+            <span class="cap">The new form, and what you can do with it</span>
+            <div class="form-mock" style="padding:0">
+              <label class="new-field">Languages and level <span class="newtag">New</span><span class="input"><span class="tag">German C1</span><span class="tag">English B2</span></span></label>
+              <div class="grid2"><label class="new-field">City <span class="newtag">New</span><span class="input">Sarajevo</span></label><label class="new-field">Can start <span class="newtag">New</span><span class="input">1 Oct</span></label></div>
+            </div>
+            <div class="alert ok" style="margin:.9rem 0 0"><span><b>One filter:</b> German, B2 or better, Sarajevo. 5 people.</span></div>
+          </div>
+        </div>
+        <p class="scene-hint">Flip between "Today" and "With this change" to see the difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Change 3 -->
+  <section class="screen" id="change-3" data-title="Change 3: Talent pool and follow-ups" data-ch="2" tabindex="-1" aria-labelledby="h-c3" hidden>
+    <div class="w-wrap w-split">
+      <div>
+        <p class="w-kicker">Change 3 of 5: Talent pool and follow-ups</p>
+        <h2 class="w-h2" id="h-c3">Nobody forgotten, and past applicants found again.</h2>
+        <p class="said">I lose track of who I still need to call back. And when a new role opens, I start from zero, even though good people applied before.</p>
+        <dl class="pce">
+          <div><dt>What changes</dt><dd>A short list every morning: who is waiting, who did not answer, who has an interview. Ready-made messages, filled in with their name. When a new role opens, the list shows past applicants who fit and agreed to stay on file.</dd></div>
+          <div><dt>What it takes</dt><dd><span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Medium job</span> <span class="muted">about 3 to 4 weeks</span></dd></div>
+          <div><dt>What we need</dt><dd>Change 1 first, because this builds on the list</dd></div>
+        </dl>
+        <details class="more"><summary>How does it work behind the scenes?</summary><div class="inner">
+          <p>Messages open in your own email, already filled in, or are copied for WhatsApp or Viber. Sending straight from a DDC address is possible too, with a short setup by whoever manages your email.</p>
+          <p>Once a month the list also shows records past the retention period you set, and a short summary of applications and hires per language.</p>
+        </div></details>
+        <div class="w-actions" style="margin-top:.5rem"><a class="btn light ext" href="ideas/talent-pool.html" target="_blank" rel="noopener">Open the full details</a></div>
+      </div>
+      <div>
+        <div class="scene" data-scene>
+          <div class="scene-switch" role="group" aria-label="Show"><button type="button" data-pane="today" aria-pressed="true">Today</button><button type="button" data-pane="after" aria-pressed="false">With this change</button></div>
+          <div class="pane" data-pane="today">
+            <span class="cap">Today, in your head and in notes</span>
+            <ul class="chain">
+              <li>Selma: called last week, no answer. Try again, but when?</li>
+              <li>Offer sent to Stefan: did he ever reply?</li>
+              <li>New Dutch role: search old emails and the Excel for Dutch speakers</li>
+            </ul>
+          </div>
+          <div class="pane" data-pane="after" hidden>
+            <span class="cap">Every morning, in the list</span>
+            <div class="tasks">
+              <div class="task" style="box-shadow:0 0 0 1px var(--line)"><span class="box"></span><span><b>Selma Mujić</b> no answer for 7 days</span><span class="when">Follow up</span></div>
+              <div class="task" style="box-shadow:0 0 0 1px var(--line)"><span class="box"></span><span><b>Stefan Jovanović</b> offer, no reply yet</span><span class="when">Check today</span></div>
+            </div>
+            <div class="alert info" style="margin:.75rem 0 0"><span><b>New role: Dutch support.</b> 6 past applicants speak Dutch B2 or better and agreed to stay on file.</span></div>
+          </div>
+        </div>
+        <p class="scene-hint">Flip between "Today" and "With this change" to see the difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Change 4 -->
+  <section class="screen" id="change-4" data-title="Change 4: Language check" data-ch="2" tabindex="-1" aria-labelledby="h-c4" hidden>
+    <div class="w-wrap w-split">
+      <div>
+        <p class="w-kicker">Change 4 of 5: Language check</p>
+        <h2 class="w-h2" id="h-c4">Language levels checked by your own colleagues, without arranging a call.</h2>
+        <p class="said">I can't judge Norwegian or Czech myself, so for every candidate I have to find a colleague and a time that suits everyone.</p>
+        <div class="alert info"><span><b>You probably already have a test.</b> If so, tell us how it works: we would build around it rather than replace it.</span></div>
+        <dl class="pce">
+          <div><dt>What changes</dt><dd>The candidate records two or three short spoken answers and writes one short reply, on their phone, in about ten minutes. A colleague who speaks the language listens when it suits them and picks a level. The result appears on the candidate's record.</dd></div>
+          <div><dt>What it takes</dt><dd><span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Medium job</span> <span class="muted">about 3 to 4 weeks</span></dd></div>
+          <div><dt>What we need</dt><dd>Colleagues who speak each language, to adapt the questions and do the reviews</dd></div>
+        </dl>
+        <details class="more"><summary>What it is not</summary><div class="inner">
+          <p>No software decides the level: a person always does. It is an internal check, not a certificate. Reviewers see a candidate code instead of a name, and recordings are deleted after the decision.</p>
+        </div></details>
+        <div class="w-actions" style="margin-top:.5rem"><a class="btn light ext" href="ideas/language-check.html" target="_blank" rel="noopener">Open the full details</a></div>
+      </div>
+      <div>
+        <div class="scene" data-scene>
+          <div class="scene-switch" role="group" aria-label="Show"><button type="button" data-pane="today" aria-pressed="true">Today</button><button type="button" data-pane="after" aria-pressed="false">With this change</button></div>
+          <div class="pane" data-pane="today">
+            <span class="cap">Today, for one Norwegian candidate</span>
+            <ul class="chain">
+              <li>Find a colleague who speaks Norwegian</li>
+              <li>Find a time that suits their shift and the candidate</li>
+              <li>Phone call, then write the result down</li>
+            </ul>
+          </div>
+          <div class="pane" data-pane="after" hidden>
+            <span class="cap">With the language check</span>
+            <div class="answer"><span class="play"></span><span class="wave" aria-hidden="true"><i style="height:62%"></i><i style="height:88%"></i><i style="height:41%"></i><i style="height:95%"></i><i style="height:70%"></i><i style="height:33%"></i><i style="height:80%"></i><i style="height:56%"></i><i style="height:92%"></i><i style="height:47%"></i><i style="height:74%"></i><i style="height:28%"></i><i style="height:85%"></i><i style="height:60%"></i><i style="height:38%"></i><i style="height:90%"></i><i style="height:52%"></i><i style="height:77%"></i><i style="height:35%"></i><i style="height:69%"></i><i style="height:44%"></i><i style="height:83%"></i><i style="height:58%"></i><i style="height:30%"></i></span><span class="dur">1:12</span></div>
+            <p style="margin:.75rem 0 .35rem;font-weight:600">Your colleague picks a level</p>
+            <div class="levels"><span>Below B1</span><span>B1</span><span class="on">B2</span><span>C1</span><span>C2</span></div>
+            <div class="alert ok" style="margin:.9rem 0 0"><span><b>On the record:</b> Norwegian, speaking B2, writing B2.</span></div>
+          </div>
+        </div>
+        <p class="scene-hint">Flip between "Today" and "With this change" to see the difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Change 5 -->
+  <section class="screen" id="change-5" data-title="Change 5: From yes to first day" data-ch="2" tabindex="-1" aria-labelledby="h-c5" hidden>
+    <div class="w-wrap w-split">
+      <div>
+        <p class="w-kicker">Change 5 of 5: From yes to first day</p>
+        <h2 class="w-h2" id="h-c5">Documents, start dates and day one, all in one place.</h2>
+        <p class="said">After someone says yes, I chase documents and start dates by phone. Sometimes a person is marked "employed" and never actually starts.</p>
+        <dl class="pce">
+          <div><dt>What changes</dt><dd>Each new hire gets one personal page: start date, what to bring, documents to upload, and an "I'll be there" button. You see who is ready. On day one you tick who arrived, and they become "Working".</dd></div>
+          <div><dt>What it takes</dt><dd><span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Medium job</span> <span class="muted">about 3 to 4 weeks</span></dd></div>
+          <div><dt>What we need</dt><dd>Your list of documents and first-day details. Works best with change 1.</dd></div>
+        </dl>
+        <details class="more"><summary>What it is not</summary><div class="inner">
+          <p>Contracts are not signed online; they stay in your current process. Which documents are legally required is DDC's decision. ID copies are stored more strictly and deleted or handed to HR after the start.</p>
+        </div></details>
+        <div class="w-actions" style="margin-top:.5rem"><a class="btn light ext" href="ideas/first-day.html" target="_blank" rel="noopener">Open the full details</a></div>
+      </div>
+      <div>
+        <div class="scene" data-scene>
+          <div class="scene-switch" role="group" aria-label="Show"><button type="button" data-pane="today" aria-pressed="true">Today</button><button type="button" data-pane="after" aria-pressed="false">With this change</button></div>
+          <div class="pane" data-pane="today">
+            <span class="cap">Today, on the first morning</span>
+            <div class="bigstat"><div><b>8</b>marked "employed" in Excel</div><div><b>6</b>actually arrived</div></div>
+            <ul class="chain" style="margin-top:.75rem"><li>You find out on Monday morning, not before</li></ul>
+          </div>
+          <div class="pane" data-pane="after" hidden>
+            <span class="cap">With the first-day board</span>
+            <div class="bigstat"><div><b>7 of 8</b>ready by Friday</div><div><b>1</b>not confirmed, so you called on Friday</div></div>
+            <div class="alert ok" style="margin:.75rem 0 0"><span><b>Monday:</b> you tick who arrived. They become "Working" with the date.</span></div>
+          </div>
+        </div>
+        <p class="scene-hint">Flip between "Today" and "With this change" to see the difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Choose -->
+  <section class="screen" id="choose" data-title="Your choice" data-ch="3" tabindex="-1" aria-labelledby="h-choose" hidden>
+    <div class="w-wrap w-read">
+      <p class="w-kicker">Your choice</p>
+      <h2 class="w-h2" id="h-choose">Which of these would help you most?</h2>
+      <p class="just-for">This is only here to help you think and decide. Nothing you tick is saved or sent anywhere.</p>
+      <div class="picks" id="picks">
+        <label><input type="checkbox" data-min="5" data-max="8"><span><b>1. One candidate list</b><small>The core fix. Everything else builds on it.</small></span><span class="size">5 to 8 weeks</span></label>
+        <label><input type="checkbox" data-min="1" data-max="2"><span><b>2. Better applications</b><small>Quick. Good to do first.</small></span><span class="size">1 to 2 weeks</span></label>
+        <label><input type="checkbox" data-min="3" data-max="4"><span><b>3. Talent pool and follow-ups</b><small>Needs change 1.</small></span><span class="size">3 to 4 weeks</span></label>
+        <label><input type="checkbox" data-min="3" data-max="4"><span><b>4. Language check</b><small>Works on its own.</small></span><span class="size">3 to 4 weeks</span></label>
+        <label><input type="checkbox" data-min="3" data-max="4"><span><b>5. From yes to first day</b><small>Best with change 1.</small></span><span class="size">3 to 4 weeks</span></label>
+      </div>
+      <div class="total" id="total" aria-live="polite"></div>
+      <p class="w-note" style="margin-top:1rem">Our suggestion: start with change 2, so the new list gets better information from day one, then change 1. The others can follow whenever they are useful. There are also a few <a href="ideas/smaller-ideas.html" target="_blank" rel="noopener">small extras</a>, like an interview booking link.</p>
+    </div>
+  </section>
+
+  <!-- Promises -->
+  <section class="screen" id="promises" data-title="What we promise" data-ch="4" tabindex="-1" aria-labelledby="h-promises" hidden>
+    <div class="w-wrap w-read" style="max-width:60rem">
+      <p class="w-kicker">Straight answers</p>
+      <h2 class="w-h2" id="h-promises">What we promise, and what we don't.</h2>
+      <div class="two-lists">
+        <div style="--c: var(--green)">
           <h3>We will</h3>
           <ul>
-            <li>Build what you choose from these mockups, adjusted to your real columns and statuses.</li>
-            <li>Keep the careers site and the WP Job Openings plugin; candidates apply exactly as before.</li>
-            <li>Import your existing Excel and show you likely duplicates to confirm, not merge them blindly.</li>
-            <li>With the recommended build, host candidate data in the EU, give access only to the people you name, and sign a data processing agreement with you.</li>
-            <li>Train you and hand over short written instructions.</li>
+            <li>Build only what you choose, adjusted to how you really work.</li>
+            <li>Keep your careers website; candidates apply exactly as before.</li>
+            <li>Never merge two records without your say.</li>
+            <li>Keep candidate data in the EU, open only to the people you name, under a written data agreement.</li>
+            <li>Show you how it works and leave short written instructions.</li>
           </ul>
         </div>
-        <div style="--c: var(--raspberry-light)">
+        <div style="--c: var(--raspberry)">
           <h3>We won't claim</h3>
           <ul>
-            <li>That you will get more applicants or rank higher on Google. Readable ads help; they guarantee nothing.</li>
-            <li>That the list is right if nobody updates it. It warns and reminds, but a person still records the outcome of a call.</li>
-            <li>Legal compliance. We build the tools for your retention rules; the rules and wording come from your legal or HR team.</li>
-            <li>Automatic candidate scoring. We don't recommend letting software rank people.</li>
-            <li>A link to your HR or payroll system, unless it can export a list we can read.</li>
+            <li>That you will get more applicants or rank higher on Google.</li>
+            <li>That the list stays right if nobody updates it. It warns and reminds; a person still records what happened.</li>
+            <li>Legal compliance. We build tools for your rules; the rules come from your legal or HR team.</li>
+            <li>That software can judge candidates. People decide, always.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12. Next -->
-  <section class="slide" id="next" data-title="Next step">
-    <div class="slide-inner split even">
-      <div>
-        <p class="kicker">Next step</p>
-        <h2>One hour with your Excel open.</h2>
-        <p class="lede">We walk through how you really use the sheet today, then come back with fixed prices and dates for the proposals you want.</p>
-        <p>No personal data needs to leave your computer for this: the column names and a description of the statuses are enough.</p>
-      </div>
-      <div>
-        <h3>What we'd like to ask</h3>
-        <ol class="questions">
+  <!-- Next step -->
+  <section class="screen" id="next" data-title="Next step" data-ch="4" tabindex="-1" aria-labelledby="h-next" hidden>
+    <div class="w-wrap w-read">
+      <p class="w-kicker">Next step</p>
+      <h2 class="w-h2" id="h-next">One hour, with your Excel open.</h2>
+      <p class="w-lead">You show us how you really work today. We come back with a fixed price and dates for the changes you picked.</p>
+      <p class="w-note">No personal data needs to leave your computer: the column names and how you use them are enough.</p>
+      <details class="more"><summary>The questions we would like to ask</summary><div class="inner">
+        <ol style="margin:0;padding-left:1.2rem;display:grid;gap:.4rem">
           <li>Roughly how many applications arrive each month, and where from: the website, MojPosao, LinkedIn, email?</li>
           <li>Who else edits the Excel?</li>
-          <li>Who manages the WordPress site, and can we add a small plugin?</li>
-          <li>Is WP Job Openings the free or the Pro version?</li>
+          <li>Who manages the careers website, and can we add a small add-on to it?</li>
           <li>Which statuses and columns do you actually use?</li>
           <li>Is there an HR or payroll system that knows who works here now?</li>
           <li>How long do you keep candidate data?</li>
           <li>Do you reach candidates by phone, email, WhatsApp or Viber?</li>
-          <li>How do you test languages today, and does any end client require a specific test?</li>
+          <li>How do you test languages today, and does any client require a specific test?</li>
           <li>Who handles documents and the first day after someone says yes?</li>
         </ol>
+      </div></details>
+      <p class="w-lead" style="margin-top:1.25rem">To book the hour, reply to whoever sent you this link.</p>
+      <div class="w-actions">
+        <button class="btn light" type="button" data-go="idea">See the five changes again</button>
+        <button class="btn ghost" type="button" data-go="start" style="color:var(--ink)">Back to the start</button>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="pager">
-  <span class="count" aria-live="polite"><b id="cur">1</b> of <span id="tot">12</span></span>
-  <span class="keys">
-    <button type="button" id="prev" aria-label="Previous slide"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
-    <button type="button" id="next" aria-label="Next slide"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
-  </span>
-</footer>
+<nav class="w-nav" aria-label="Step navigation">
+  <div class="w-wrap">
+    <button class="btn light" type="button" id="back">Back</button>
+    <span class="where" id="where" aria-live="polite"></span>
+    <button class="btn" type="button" id="fwd">Next<span class="next-label" id="next-label"></span></button>
+  </div>
+</nav>
 
-<script src="assets/deck.js"></script>
+<script src="assets/walk.js"></script>
 </body>
 </html>

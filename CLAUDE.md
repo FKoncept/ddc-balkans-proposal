@@ -14,21 +14,26 @@ WordPress plugin, are copied by hand into a large Excel file, and statuses there
 (contacted, employed, working, left...) drift out of date. People who already work
 there get contacted again, people who quit are not flagged, and so on.
 
-The site presents **three core proposals** (one candidate list, better applications,
-talent pool and follow-ups) plus **two for later** (language check, from yes to first
-day). Each has a mockup and its own detail page that opens in a new tab. There is also a
-list of smaller ideas, a rough difficulty and effort estimate for each, and an honest
-"what we do not promise" section.
+The site is a **guided walkthrough** of **five changes** (one candidate list, better
+applications, talent pool and follow-ups, language check, from yes to first day). Each
+change has a before and after picture, a plain-language size and rough time, and its own
+detail page that opens in a new tab. There is also a page of small extras and an honest
+"what we promise, and what we don't" screen.
 
 ## Structure
 
 - `site/` is the whole website: plain HTML, CSS and a little JS, no build step.
-  - `site/index.html` is the presentation (12 slides, keyboard and click navigation).
+  - `site/index.html` is the walkthrough: 11 screens, one shown at a time, driven by
+    `site/assets/walk.js`. Every screen has its own `#id` link. It must work both for
+    someone reading alone and for someone presenting (arrow keys, chapter jumps).
   - `site/ideas/*.html` are the detail pages, linked with `target="_blank"`:
     `one-candidate-list`, `better-applications`, `talent-pool`, `language-check`,
     `first-day`, `smaller-ideas`. Previous/next links run in that order.
   - `site/assets/` holds the shared stylesheet and scripts.
+- `site/assets/board.js` is the interactive demo on the change 1 detail page.
 - `vercel.json` at the root serves `site/` as a static site.
+- `design/ux-options/` holds the three redesign mockups (A, B, C). Not deployed; kept
+  as a record of the choice.
 
 ## Non-negotiable rules
 
@@ -54,6 +59,16 @@ list of smaller ideas, a rough difficulty and effort estimate for each, and an h
 - Facts about WP Job Openings / HireZoot (free vs Pro, hooks we rely on) are recorded
   in `PROGRESS.md`; re-check them before changing what a proposal claims the plugin
   can do.
+
+## Writing and UX rules (from the redesign)
+
+- **One idea per screen.** New content goes into the existing template, not beside it.
+- **Plain language on the main path.** Technical words (WordPress, plugin, data
+  agreement) only inside fold-away "behind the scenes" sections.
+- **"Change", not "proposal"**, for the five items. Sizes are "Small job", "Medium
+  job", "Bigger job", always with rough weeks.
+- **Never put words in her mouth.** Her problems are framed as "Sounds familiar?",
+  never "You told us".
 
 ## Decisions (2026-09-23)
 

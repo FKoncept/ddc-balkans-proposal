@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Redesign options</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mockups.css">
+<style>
+  .opts { display: grid; gap: 1rem; margin: 2rem 0 4rem; }
+  .opt { display: grid; grid-template-columns: 3rem 1fr auto; gap: 1rem; align-items: center; background: #fff; border-radius: var(--radius-l); padding: 1.25rem; box-shadow: 0 0 0 1px var(--line); text-decoration: none; color: inherit; }
+  .opt:hover { box-shadow: 0 0 0 2px var(--teal); }
+  .opt .l { font-size: 1.75rem; font-weight: 700; color: var(--teal); }
+  .opt h2 { margin: 0 0 .25rem; font-size: 1.25rem; }
+  .opt p { margin: 0; color: var(--ink-2); }
+  @media (max-width: 600px) { .opt { grid-template-columns: 2rem 1fr; } .opt .btn { grid-column: 2; justify-self: start; } }
+</style>
+</head>
+<body class="mock">
+<div class="wrap" style="padding-top:3rem">
+  <div class="read">
+    <p class="muted">Internal: for F Koncept only</p>
+    <h1 class="big">Three ways to make the proposal easier to follow</h1>
+    <p class="lead">Same content, same brand. What changes is how a first-time reader moves through it. Each mockup is clickable.</p>
+  </div>
+  <div class="opts">
+    <a class="opt" href="a-guided.html"><span class="l">A</span><div><h2>Guided walkthrough</h2><p>One idea per screen, a progress bar, Next and Back. Welcome, how it works today, the idea, the five changes one by one, pick what helps, next step.</p></div><span class="btn small">Open</span></a>
+    <a class="opt" href="b-problems.html"><span class="l">B</span><div><h2>Start from your problem</h2><p>One page. Five problems written in her words. She clicks the one she recognises and the fix opens in three short steps, with effort and a link to details.</p></div><span class="btn small">Open</span></a>
+    <a class="opt" href="c-week.html"><span class="l">C</span><div><h2>Your week, before and after</h2><p>Five moments from a working week. One switch flips every moment from "today" to "with the changes". Effort summary at the end.</p></div><span class="btn small">Open</span></a>
+  </div>
+</div>
+</body>
+</html>
