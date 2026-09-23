@@ -45,8 +45,10 @@ detail page that opens in a new tab. There is also a page of small extras and an
 - **Never invent client facts.** Every candidate name and number in the mockups is
   sample data and is visibly marked as such. Facts about DDC come from their public
   site (recorded in `PROGRESS.md`) or from the user.
-- **No em or en dashes in visitor-facing copy** (carried over from the F Koncept
-  house style). Use commas, colons, full stops or brackets.
+- **No long dashes anywhere a visitor can see them** (carried over from the F Koncept
+  house style): no em dash, en dash or minus sign, in text, titles, labels, or
+  CSS-generated content. Use commas, colons, full stops or brackets. Fold-away
+  sections use a drawn chevron, not a +/minus sign.
 - **Brand:** DDC's own palette and type (Onest; navy to teal gradient; teal, raspberry,
   green and lavender accents). Details and hex values are in `PROGRESS.md`.
 - **Accounts:** GitHub `FKoncept`, Vercel `fkoncept`. The repo is public. Commits are

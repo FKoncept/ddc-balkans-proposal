@@ -44,8 +44,8 @@ button.btn { font-family: inherit; }
 details.more { margin-top: 1rem; border-radius: var(--radius-m); background: #fff; box-shadow: 0 0 0 1px var(--line); }
 details.more summary { cursor: pointer; padding: .9rem 1.1rem; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
 details.more summary::-webkit-details-marker { display: none; }
-details.more summary::after { content: "+"; font-size: 1.25rem; color: var(--teal); }
-details.more[open] summary::after { content: "\2212"; }
+details.more summary::after { content: ""; width: .5rem; height: .5rem; margin: 0 .25rem .2rem 0; border-right: 2px solid var(--teal); border-bottom: 2px solid var(--teal); transform: rotate(45deg); transition: transform .2s; flex: none; }
+details.more[open] summary::after { transform: rotate(-135deg); margin-bottom: -.2rem; }
 details.more > div { padding: 0 1.1rem 1rem; color: var(--ink-2); }
 
 .term { border-bottom: 1.5px dotted var(--teal); cursor: help; }

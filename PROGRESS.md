@@ -434,3 +434,28 @@ Answers to the open questions:
 The user reviewed the walkthrough locally: **"this is much much better"**. Approved as
 is. Docs brought up to date (TODO wording now uses "size" and "screen"), committed,
 still **not pushed**: the push waits for the user's go.
+
+---
+
+## 2026-09-23 — Session 1 (continued): no long dashes anywhere on the site
+
+The user asked that any "big dash" on the website be replaced. Full check:
+- Scanned every HTML, CSS and JS file in `site/` for em dash, en dash, figure dash,
+  horizontal bar and minus sign, as characters, HTML entities (`&mdash;`, `&ndash;`,
+  `&minus;` and numeric forms) and CSS escapes (`\2014`, `\2013`, `\2212`), plus
+  hyphens used as dashes in text.
+- **One hit:** the open/closed marker on the fold-away sections ("How does it work
+  behind the scenes?" and the others) showed "+" when closed and **"−" (minus sign)**
+  when open, drawn by CSS `content: "\2212"`.
+- **Fix:** the marker is now a small chevron drawn with CSS borders (pointing down
+  when closed, up when open, with a short rotation). No character at all. Same fix in
+  `design/ux-options/mockups.css` for consistency.
+- Verified: the only CSS-generated text left is "Sounds familiar?" and "What we
+  noticed"; no dash-like characters in `walk.js` or `board.js` output strings. The
+  chevron was checked in a separate headless Chrome (the DevTools browser was locked
+  after the session resumed).
+- The `mix&#8209;ups` in the welcome headline is a non-breaking hyphen (short, like a
+  normal hyphen), kept on purpose so the word does not split across lines.
+- CLAUDE.md rule widened from "no em or en dashes in copy" to "no long dashes anywhere
+  a visitor can see them", including CSS-generated content.
+- Committed, not pushed.
