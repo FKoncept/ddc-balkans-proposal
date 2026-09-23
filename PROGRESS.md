@@ -459,3 +459,8 @@ The user asked that any "big dash" on the website be replaced. Full check:
 - CLAUDE.md rule widened from "no em or en dashes in copy" to "no long dashes anywhere
   a visitor can see them", including CSS-generated content.
 - Committed, not pushed.
+
+### Docs check
+
+The user asked for all docs to be up to date. CLAUDE.md and PROGRESS.md were already
+current; TODO.md's push item now also lists the dash clean-up. Committed, not pushed.

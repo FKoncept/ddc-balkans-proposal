@@ -13,8 +13,9 @@ move its story to `PROGRESS.md` and delete it here.
 - [ ] **Pricing.** The site shows size (small / medium / bigger job) and rough weeks
       only, no prices. Do we want price ranges on the site, or only in the meeting?
 - [ ] **Push.** The user approved the walkthrough redesign on 2026-09-23 but has not
-      asked for a push yet. Committed, not pushed: proposals 4 and 5 and the redesign.
-      The live site still shows the old 11-slide deck until then.
+      asked for a push yet. Committed, not pushed: proposals 4 and 5, the redesign, and
+      the dash clean-up (chevrons on fold-away sections). The live site still shows the
+      old 11-slide deck until then.
 - [ ] **Alone or presented?** Not decided yet. The walkthrough supports both; if it
       will be presented, consider a short presenter note.
 - [x] ~~Who builds proposal 1?~~ Answered 2026-09-23: the user and Claude together.
