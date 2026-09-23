@@ -196,3 +196,58 @@ state. No em/en dashes anywhere in `site/`.
   so a push to `main` deploys to production.
 - Live: **https://ddc-balkans-proposal.vercel.app** (all pages return 200, served
   with `X-Robots-Tag: noindex, nofollow` from `vercel.json` plus a robots meta tag).
+
+---
+
+## 2026-09-23 — Session 1 (continued): feasibility check and decisions
+
+### The user asked: can we really deliver all of this?
+
+We answered honestly, splitting the work into three groups. **Safe to promise**:
+proposal 2 and the smaller ideas. **Deliverable with conditions**: proposal 1 and,
+through it, proposal 3. **Be careful**: the estimates are ranges, not quotes, and the
+recruiter's workflow is second-hand.
+
+### Verified in the plugin's source (WP Job Openings / HireZoot, free version from wordpress.org)
+
+- Action **`awsm_job_application_submitted`** (in `class-awsm-job-openings-form.php`)
+  fires on every submitted application. Our WordPress add-on for proposal 1 hooks
+  here to send the application to the candidate list. **Proposal 1's "no more
+  copying" is technically sound.**
+- Filter **`awsm_application_form_fields`** lets us add form fields in the **free**
+  version. Proposal 2 does **not** need the Pro licence.
+- Option **`awsm_jobs_acknowledgement`** / `awsm_jobs_applicant_notification`: the
+  free version has an applicant auto-reply with customizable content and template
+  tags. The confirmation email is configuration and wording.
+
+### Conditions and risks we named
+
+1. **WordPress access** is the biggest unknown. If DDC group (UK) or an outside
+   agency manages the site, we may not be allowed to add a plugin. Proposals 1 and 2
+   both depend on it.
+2. **Who builds proposal 1.** It is a real small app (logins, CV storage, backups,
+   security). 5 to 8 weeks assumes one experienced developer working steadily.
+3. **Data responsibility.** Hosting candidate CVs makes F Koncept a processor of
+   personal data for DDC: that needs a data processing agreement and ongoing care,
+   priced as support.
+4. **Excel quality** decides how much manual duplicate review the import needs.
+
+### Decisions from the user
+
+- **The user and Claude will build it together** (proposal 1 and whatever else is
+  sold).
+- **F Koncept is fine hosting the candidate data**, as long as the client agrees.
+
+### Site changes that followed
+
+- Proposal 1: "Depends on" is now **"Permission to add a small plugin to
+  WordPress"** (was "Nothing, can start first"). Added the plain-language note that
+  we checked the plugin's code and it announces every new application. "Included"
+  now lists a **data processing agreement and backups** when we host the data. "Not
+  included, or needs a decision" now lists **permission from whoever manages the
+  WordPress site**.
+- Proposal 2: the "how it is done" step now says the free plugin is enough (auto-reply
+  built in, fields via a small add-on); "Needs from you" says **nothing to buy**,
+  replacing the Pro licence line.
+- Deck: "We will" now includes signing a data processing agreement; the suggested
+  order slide says steps 1 and 2 need permission to add a small plugin to WordPress.

@@ -47,5 +47,14 @@ effort estimate for each, and an honest "what we do not promise" section.
   https://github.com/FKoncept/ddc-balkans-proposal. Vercel is connected to the repo:
   **pushing to `main` publishes to the client.** Anything unfinished goes on a branch.
 - Preview locally with `python3 -m http.server 4173` from `site/`.
-- Facts about WP Job Openings / HireZoot (free vs Pro) are recorded in `PROGRESS.md`;
-  re-check them before changing what a proposal claims the plugin can do.
+- Facts about WP Job Openings / HireZoot (free vs Pro, hooks we rely on) are recorded
+  in `PROGRESS.md`; re-check them before changing what a proposal claims the plugin
+  can do.
+
+## Decisions (2026-09-23)
+
+- **Who builds:** the user and Claude, together.
+- **Data hosting:** F Koncept may host DDC's candidate data if the client agrees;
+  that comes with a data processing agreement and paid ongoing support.
+- **Biggest dependency:** permission to add a small plugin to their WordPress site.
+  Proposals 1 and 2 both need it.
