@@ -37,6 +37,13 @@ These change the size of the work, so the estimates stay rough until we know the
 
 ## Deferred tasks
 
+- [ ] **Contact details on the last slide.** The "Next step" slide asks for a
+      walkthrough but shows no email or phone, because we have not confirmed which
+      F Koncept contact to use. Add it once confirmed.
+- [ ] **Review pass by the user** of every claim and estimate before the link is sent
+      to the recruiter. The link is public already (noindex), so share it only when
+      happy.
+
 - [ ] Replace sample data in mockups with an anonymised copy of their real columns,
       once they share the Excel headers (headers only, no personal data).
 - [ ] Add prices once agreed.

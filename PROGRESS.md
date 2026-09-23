@@ -139,3 +139,60 @@ click-to-chat) and an explicit **what we do not promise** section.
 - **Checked against generic defaults**: no all-caps eyebrows, no numbered markers except
   where the content is a real sequence (the current flow and the roadmap), no arrows
   appended to buttons, no monospace labels, no middle-dot meta strings.
+
+### Build (same session)
+
+Site structure, plain HTML/CSS/JS, no build step:
+- `site/index.html`: 11-slide deck. Start (merge animation), How it works today,
+  What we noticed, Three proposals, Proposal 1, 2, 3, Smaller ideas, Suggested
+  order, What we promise and what we don't, Next step (questions for the meeting).
+  Keyboard (arrows, PageUp/Down, space, Home/End), side rail with slide names,
+  counter and prev/next buttons. Proximity scroll-snap on desktop; plain scroll
+  under 900px.
+- `site/ideas/one-candidate-list.html`: detail page with a **working interactive
+  demo** (`site/assets/board.js`): status and language filters, record panel with
+  history, status buttons with the guardrail (trying to contact someone "Working" or
+  "Do not contact" is refused with the reason), and "Simulate a new application"
+  cycling through a new person, a re-application by someone working here, and a
+  re-application by someone who left. Also: import-review mockup, two build options
+  (recommended web app vs lighter Microsoft Lists / Airtable), steps, included / not
+  included.
+- `site/ideas/better-applications.html`: findings, new form mockup, text job ad
+  mockup (content taken from the real German Customer Support Agent poster),
+  confirmation email mockup, how it is done, included / needs from you.
+- `site/ideas/talent-pool.html`: today view, message templates, new-role shortlist,
+  retention housekeeping, monthly summary, included / not included.
+- `site/ideas/smaller-ideas.html`: site tidy-up, interview booking link, referral
+  page, "what happens after you apply" page, chat buttons, Life at DDC content.
+- All detail links from the deck open in a new tab (`target="_blank"`).
+
+Corrections made while building (so nothing overpromises):
+- **Checked the plugin's official feature list** (wordpress.org, v4.1.0). The plugin
+  has been renamed **HireZoot**. The **free** version already has customizable email
+  notifications, auto-delete of applications, and application management; the paid
+  **Pro pack** adds a form builder, shortlist/reject/rate, advanced notifications and
+  export. Consequences: the confirmation email is pitched as "mostly setup and
+  wording", and proposal 1 now has a section "Doesn't the job plugin already do some of
+  this?" explaining the real gap (it is built around applications, not people: no
+  merging, no Excel history, no knowledge of who works here).
+- "We will host data in the EU" limited to the recommended build (the lighter
+  alternative depends on product and plan). "Build everything shown" changed to "build
+  what you choose".
+- Support period after launch not invented ("30 days" removed; "set in the offer").
+- Monthly summary moved into proposal 3; the deck's smaller-ideas slide now lists
+  the "what happens after you apply" page instead.
+- Sample phone numbers masked (`+387 61 ••• 111`) so no real number is shown.
+- Numbered markers removed where the content is not a sequence ("Why these four").
+
+Checked in Chrome at 1440x716 (short laptop), 1440x900 and 390x844 (phone): no
+horizontal overflow on any page, demo logic verified by script (filters, guardrail,
+simulation), merge animation starts only when visible, reduced motion shows the end
+state. No em/en dashes anywhere in `site/`.
+
+### Published
+
+- GitHub (public): https://github.com/FKoncept/ddc-balkans-proposal, branch `main`.
+- Vercel project `f-koncept/ddc-balkans-proposal`, **connected to the GitHub repo**,
+  so a push to `main` deploys to production.
+- Live: **https://ddc-balkans-proposal.vercel.app** (all pages return 200, served
+  with `X-Robots-Tag: noindex, nofollow` from `vercel.json` plus a robots meta tag).

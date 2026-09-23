@@ -43,3 +43,9 @@ effort estimate for each, and an honest "what we do not promise" section.
 - **Accounts:** GitHub `FKoncept`, Vercel `fkoncept`. The repo is public. Commits are
   authored as `F Koncept <fkonceptadmin@gmail.com>`.
 - The site carries `noindex`: it is public, but it is a client pitch, not marketing.
+- **Live URL:** https://ddc-balkans-proposal.vercel.app. Repo:
+  https://github.com/FKoncept/ddc-balkans-proposal. Vercel is connected to the repo:
+  **pushing to `main` publishes to the client.** Anything unfinished goes on a branch.
+- Preview locally with `python3 -m http.server 4173` from `site/`.
+- Facts about WP Job Openings / HireZoot (free vs Pro) are recorded in `PROGRESS.md`;
+  re-check them before changing what a proposal claims the plugin can do.
