@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One Candidate List | Proposal 1 for The DDC Group Balkans</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#021843">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23021843'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%231F8093' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body class="doc-page">
+
+<header class="doc-hero on-navy">
+  <div class="inner">
+    <div class="top">
+      <a class="wordmark" href="../index.html"><b>F Koncept</b><span>for The DDC Group Balkans</span></a>
+      <a href="../index.html#proposals">All proposals</a>
+    </div>
+    <p class="kicker">Proposal 1 of 3</p>
+    <h1>One candidate list</h1>
+    <p class="lede">Applications arrive in one shared list on their own. Each person exists once, every status change is recorded, and the list stops you from calling people who already work here or asked not to be contacted.</p>
+    <dl class="summary">
+      <div><dt>Difficulty</dt><dd><span class="meter" data-level="3"><span class="bars"><i></i><i></i><i></i></span>Medium to high</span></dd></div>
+      <div><dt>Rough effort</dt><dd>5 to 8 weeks</dd></div>
+      <div><dt>Depends on</dt><dd>Nothing, can start first</dd></div>
+      <div><dt>Replaces</dt><dd>The big Excel file</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main class="doc">
+
+  <section>
+    <h2>Why the Excel keeps going wrong</h2>
+    <p class="lead-p">It is not a discipline problem. A spreadsheet has no idea that row 14 and row 212 are the same person, it cannot notice that someone was contacted a week ago and never answered, and it does not stop you from typing "to contact" next to someone who started last month.</p>
+    <p>Every copy from WordPress into Excel is also a chance for a typo, a missed application or a second row for the same person. The fix is to take the copying out completely, and let the list check itself.</p>
+  </section>
+
+  <section>
+    <h2>Try it</h2>
+    <p>This is a working mockup with made-up people. Filter the list, open a record, change a status, or simulate a new application arriving from the website. Nothing is saved.</p>
+
+    <div class="window" style="margin-top:1.5rem">
+      <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">DDC Balkans candidates</span><span class="sample">Sample data</span></div>
+      <div class="window-body">
+        <div class="demo-bar">
+          <button class="btn small" type="button" id="simulate">Simulate a new application</button>
+          <span class="note" id="sim-hint">Try it three times: a new person, someone who works here, someone who left.</span>
+        </div>
+        <div class="demo">
+          <div>
+            <div class="filters" role="group" aria-label="Filter by status" id="f-status">
+              <button type="button" data-v="all" aria-pressed="true">Everyone</button>
+              <button type="button" data-v="contact" aria-pressed="false">To contact</button>
+              <button type="button" data-v="progress" aria-pressed="false">In progress</button>
+              <button type="button" data-v="working" aria-pressed="false">Working</button>
+              <button type="button" data-v="closed" aria-pressed="false">Closed</button>
+            </div>
+            <div class="filters" role="group" aria-label="Filter by language" id="f-lang">
+              <button type="button" data-v="all" aria-pressed="true">All languages</button>
+              <button type="button" data-v="German" aria-pressed="false">German</button>
+              <button type="button" data-v="Dutch" aria-pressed="false">Dutch</button>
+              <button type="button" data-v="Italian" aria-pressed="false">Italian</button>
+              <button type="button" data-v="Swedish" aria-pressed="false">Swedish</button>
+            </div>
+            <div class="table-wrap">
+              <table class="list" aria-label="Candidates">
+                <thead><tr><th>Candidate</th><th>Languages</th><th>City</th><th>Status</th></tr></thead>
+                <tbody id="rows"></tbody>
+              </table>
+            </div>
+            <p class="caption" id="count"></p>
+          </div>
+          <aside class="profile">
+            <div id="demo-msg" role="status" aria-live="polite"></div>
+            <div id="profile"><p class="empty">Open a candidate to see their record.</p></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <p class="caption">"To contact" only ever shows people who are new or waiting for a call back. Anyone working here, or closed, is left out automatically.</p>
+  </section>
+
+  <section>
+    <h2>What you get</h2>
+    <ul class="gets">
+      <li><b>Applications arrive on their own</b>A small add-on to your WordPress site sends each new application, CV included, to the list as soon as it is submitted. Candidates see no change.</li>
+      <li><b>One record per person</b>A new application with an email or phone number already in the list is attached to that person's record, with a clear note that they applied again.</li>
+      <li><b>Your own statuses</b>We use the statuses you use today (for example New, Contacted, Interview, Offer, Working, Left, Not suitable, Do not contact), grouped by colour.</li>
+      <li><b>Full history</b>Every change shows who made it and when, with an optional note. No more guessing why a row says what it says.</li>
+      <li><b>Guardrails</b>Working and do-not-contact people never appear in call lists. Trying to contact them shows a warning with the reason.</li>
+      <li><b>Search and filters</b>By name, email, phone, language, city, role and status. Filters by language level and city work fully once proposal 2 adds those fields.</li>
+      <li><b>Your Excel imported</b>We bring over the existing sheet, and show you likely duplicates side by side to confirm before anything is merged.</li>
+      <li><b>Export any time</b>Download the whole list to Excel whenever you want. Your data is never locked in.</li>
+      <li><b>Named access</b>Each person who uses the list has their own login. You decide who that is, and can remove access at any time.</li>
+      <li><b>Chat buttons</b>One click opens WhatsApp or Viber with the candidate's number filled in, and a call button on phones.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Bringing the Excel across, carefully</h2>
+    <p>Years of history are worth keeping, but a spreadsheet written by hand will have the same person spelled two ways. We never merge records on our own guess. The import shows each likely pair and you choose.</p>
+    <div class="window" style="margin-top:1.5rem">
+      <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">Import review: 1 of 38 possible duplicates</span><span class="sample">Sample data</span></div>
+      <div class="window-body">
+        <div class="alert info"><span><b>Same phone number, similar name.</b> These two rows from your Excel look like the same person.</span></div>
+        <div class="dup">
+          <div class="card"><b>Row 14</b>Amina <span class="diff">Hodžić</span><br>+387 61 ••• 111<br>German<br>Status: <span class="diff">To contact</span>, 11 Feb 2026</div>
+          <span class="vs">and</span>
+          <div class="card"><b>Row 212</b>Amina <span class="diff">Hodzic</span><br>+387 61 ••• 111<br>German, English<br>Status: <span class="diff">Working</span>, 12 Mar 2026</div>
+        </div>
+        <div class="dup-actions">
+          <span class="btn small">Same person, keep the newest status</span>
+          <span class="btn small ghost" style="color:var(--ink)">Different people</span>
+          <span class="btn small ghost" style="color:var(--ink)">Decide later</span>
+        </div>
+      </div>
+    </div>
+    <p class="caption">The number of duplicates is invented for the mockup. We will know the real figure after a first trial import.</p>
+  </section>
+
+  <section>
+    <h2>Doesn't the job plugin already do some of this?</h2>
+    <p>Partly, and it is worth knowing before you decide. WP Job Openings (now called HireZoot) keeps every application inside WordPress. Its paid Pro pack adds shortlisting, rejecting, rating and exporting applications.</p>
+    <p>What it is built around is the <em>application</em>, not the <em>person</em>. It does not merge several applications from the same person, it does not hold the history you have in Excel today, and it has no idea who currently works here or asked not to be contacted. Those three gaps are exactly where your mix-ups come from, so they are what this proposal adds. If you already have Pro, we will say plainly which parts you can use as they are.</p>
+  </section>
+
+  <section>
+    <h2>Two ways to build it</h2>
+    <p>We recommend the first. The second is a fair choice if budget matters more than fit, and we are happy to build either.</p>
+    <div class="options">
+      <div class="option recommended">
+        <p class="tagline">Recommended</p>
+        <h3>A small web app made for this</h3>
+        <ul>
+          <li>Built around your statuses and rules, including the guardrails exactly as shown above.</li>
+          <li>Candidate data and CVs stored in an EU data centre, with private file storage.</li>
+          <li>Works in any browser, on a laptop or a phone. Nothing to install.</li>
+          <li>Proposal 3 (reminders, templates, shortlists) plugs straight into it.</li>
+        </ul>
+        <p><span class="meter" data-level="3"><span class="bars"><i></i><i></i><i></i></span>Medium to high</span><br><span class="note">Rough effort 5 to 8 weeks. Small monthly hosting cost, which we will quote.</span></p>
+      </div>
+      <div class="option">
+        <p class="tagline">Lighter alternative</p>
+        <h3>A structured shared table</h3>
+        <ul>
+          <li>Built in Microsoft Lists (if you use Microsoft 365) or Airtable, with automation that adds each application.</li>
+          <li>Proper statuses, history and one record per email address.</li>
+          <li>Guardrails are simpler: filtered views, not warnings.</li>
+          <li>Per-user licences may apply, and where the data is stored depends on the product and plan.</li>
+        </ul>
+        <p><span class="meter" data-level="2"><span class="bars"><i></i><i></i><i></i></span>Low to medium</span><br><span class="note">Rough effort 1 to 3 weeks.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How we would run it</h2>
+    <ol class="steps">
+      <li><div><b>One hour with your Excel.</b> You show us how you really use it. Column names only, no personal data needs to leave your computer.</div></li>
+      <li><div><b>Agree the statuses and rules.</b> Which statuses exist, which ones hide a person from call lists, what counts as a duplicate.</div></li>
+      <li><div><b>Build the list and the WordPress connection.</b> You get a test version with sample data to click through and comment on.</div></li>
+      <li><div><b>Import the Excel.</b> Together we review the likely duplicates.</div></li>
+      <li><div><b>Two weeks side by side.</b> New applications land in the list; you keep Excel open as a safety net.</div></li>
+      <li><div><b>Retire the Excel.</b> Kept as a read-only archive, not deleted.</div></li>
+    </ol>
+  </section>
+
+  <section class="two-col">
+    <div class="box-list" style="--c: var(--green)">
+      <h3>Included</h3>
+      <ul>
+        <li>The list, the WordPress connection and the Excel import</li>
+        <li>Logins for the people you name</li>
+        <li>A short written guide and a training session</li>
+        <li>Fixes for anything that does not work as agreed, for a period after launch set in the offer</li>
+      </ul>
+    </div>
+    <div class="box-list" style="--c: var(--raspberry)">
+      <h3>Not included, or needs a decision</h3>
+      <ul>
+        <li>Links to an HR or payroll system (possible only if it can export a list)</li>
+        <li>Legal wording for privacy notices: that comes from your legal or HR team</li>
+        <li>Automatic ranking of candidates: we do not recommend it</li>
+        <li>Ongoing hosting and support, quoted separately</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="doc-foot">
+    <span>Estimates are rough and firm up after the Excel walkthrough.</span>
+    <span><a href="better-applications.html">Next: Better applications</a></span>
+  </footer>
+</main>
+
+<script src="../assets/board.js"></script>
+</body>
+</html>
