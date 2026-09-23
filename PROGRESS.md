@@ -303,3 +303,49 @@ Considered and not recommended as proposals: hiring requests from team leads (ba
 option), multi-channel intake (a gap to close inside proposal 1, not a new proposal),
 a candidate FAQ chatbot, AI CV parsing, and automatic posting to job boards (no
 verified APIs).
+
+### User decisions on the two new proposals
+
+1. **Add both** proposals 4 and 5.
+2. **Other application channels** (MojPosao, LinkedIn, email): not built now, the focus
+   stays on the DDC website process. Mention it as an option: if they want, we look
+   into it and prepare a plan.
+3. The user thinks DDC **already has a language test**. Bring it into the proposal
+   as a question rather than assume.
+
+### Site changes
+
+- **Deck:** new slide 8 **"Two more, for later"** (`#later`) between proposal 3 and
+  "Smaller ideas": two cards with mini mockups (a Norwegian review with a level picker;
+  a "Starting Monday 5 October" readiness list), difficulty and effort, links to the
+  new detail pages. Deck is now **12 slides**.
+  - Opening lede now mentions "two more ideas for later".
+  - Three-proposals footnote points to the two later options.
+  - Suggested order note: both can be added any time after step 2, each about 3 to 4
+    weeks.
+  - Next-step questions: the first now asks where applications arrive (website,
+    MojPosao, LinkedIn, email); two added: how languages are tested today (and
+    whether an end client requires a test), and who handles documents and day one.
+- **New page `site/ideas/language-check.html`** (Proposal 4 of 5): opens with "First,
+  a question for you" (they probably test already; if so we build around it). Then:
+  why it matters, a phone mockup of the candidate recording screen (German prompt), a
+  reviewer mockup (candidate shown as a code, not a name; separate speaking and writing
+  levels on the A1 to C2 scale), the result on the record, steps, included / not
+  included (no software scoring, not a certificate, no target-language questions
+  without their speakers, no replacing a client-required test).
+- **New page `site/ideas/first-day.html`** (Proposal 5 of 5): where "employed" and
+  "working" get mixed up, a phone mockup of the new hire's page (start date,
+  checklist, "I'll be there"), a readiness board, a day-one check-in that sets
+  "Working", steps, included / not included (no e-signing of contracts, legal document
+  list comes from DDC, not an HR/payroll replacement).
+- **Proposal 1 page:** new section "Applications from other places" offering to look
+  into MojPosao, LinkedIn, poslovi.ba and email if they want, without promising it.
+- Kickers renumbered to "of 5"; previous/next links now run 1, 2, 3, 4, 5, then
+  smaller ideas. Smaller ideas kicker is "Alongside the proposals".
+- Removed an unverified claim ("one recruiter"): we do not know how many recruiters
+  there are.
+- New CSS: `.later`, `.phone`, `.answer` / `.wave`, `.rec`, `.levels`, `.checklist`,
+  `.cta-mock`, `.mini-bar`.
+- Checked at 1440x800, 1440x716 and 390 wide: no horizontal overflow on any page.
+- Committed, **not pushed** (user's instruction), so the live site does not show this
+  yet.

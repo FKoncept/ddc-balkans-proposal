@@ -12,9 +12,11 @@ move its story to `PROGRESS.md` and delete it here.
       (the DDC site is English). Should there also be a Bosnian/Serbian version?
 - [ ] **Pricing.** The site shows difficulty and rough effort only, no prices. Do we
       want price ranges on the site, or only in the meeting?
-- [ ] **Which three to lead with.** The deck proposes: (1) one shared candidate
-      database, (2) better application form and text-based job pages, (3) talent pool
-      and follow-ups. Confirm, or swap one for a quick win.
+- [ ] **Order and framing.** The deck leads with three core proposals (candidate list,
+      better applications, talent pool) and shows language check and first day as
+      "two more, for later". Confirm this framing before sending.
+- [ ] **Push** the proposals 4 and 5 commit when the user is happy (committed, not
+      pushed, on 2026-09-23).
 - [x] ~~Who builds proposal 1?~~ Answered 2026-09-23: the user and Claude together.
 - [x] ~~Is F Koncept willing to host candidate data?~~ Answered 2026-09-23: yes, if the
       client agrees (data processing agreement and paid support).
@@ -52,6 +54,9 @@ These change the size of the work, so the estimates stay rough until we know the
 - [ ] Do they contact candidates by phone, email, WhatsApp or Viber?
 
 ## Deferred tasks
+
+- [ ] **Other application channels** (MojPosao, LinkedIn, poslovi.ba, email): only if
+      the client asks. Then research what each channel can export and prepare a plan.
 
 - [ ] **Data processing agreement template** for DDC and F Koncept, ready before
       proposal 1 is signed. Needs a lawyer's check; we do not write legal text alone.

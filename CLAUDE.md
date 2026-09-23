@@ -14,15 +14,19 @@ WordPress plugin, are copied by hand into a large Excel file, and statuses there
 (contacted, employed, working, left...) drift out of date. People who already work
 there get contacted again, people who quit are not flagged, and so on.
 
-The site presents **three developed proposals** (each with a mockup and its own detail
-page that opens in a new tab), a list of smaller quick wins, a rough difficulty and
-effort estimate for each, and an honest "what we do not promise" section.
+The site presents **three core proposals** (one candidate list, better applications,
+talent pool and follow-ups) plus **two for later** (language check, from yes to first
+day). Each has a mockup and its own detail page that opens in a new tab. There is also a
+list of smaller ideas, a rough difficulty and effort estimate for each, and an honest
+"what we do not promise" section.
 
 ## Structure
 
 - `site/` is the whole website: plain HTML, CSS and a little JS, no build step.
-  - `site/index.html` is the presentation (slide deck, keyboard and click navigation).
-  - `site/ideas/*.html` are the detail pages, linked with `target="_blank"`.
+  - `site/index.html` is the presentation (12 slides, keyboard and click navigation).
+  - `site/ideas/*.html` are the detail pages, linked with `target="_blank"`:
+    `one-candidate-list`, `better-applications`, `talent-pool`, `language-check`,
+    `first-day`, `smaller-ideas`. Previous/next links run in that order.
   - `site/assets/` holds the shared stylesheet and scripts.
 - `vercel.json` at the root serves `site/` as a static site.
 
@@ -58,3 +62,7 @@ effort estimate for each, and an honest "what we do not promise" section.
   that comes with a data processing agreement and paid ongoing support.
 - **Biggest dependency:** permission to add a small plugin to their WordPress site.
   Proposals 1 and 2 both need it.
+- **Scope is the DDC website process.** Other channels (MojPosao, LinkedIn, email) are
+  only offered as "we can look into it", never promised.
+- **Language testing:** DDC probably has a test already. Proposal 4 asks first and
+  builds around an existing test rather than replacing it.

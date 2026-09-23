@@ -576,3 +576,58 @@ table.list th.num, table.list td.num { text-align: right; }
 .form-mock label.new-field:not(.check) > .newtag { position: absolute; right: 0; top: 0; }
 .pager { justify-content: flex-end; gap: 1.25rem; }
 .demo > *, .two-col > *, .options > * { min-width: 0; }
+
+/* ---------- Proposals 4 and 5 ---------- */
+.later { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+.later .proposal .window { margin: .25rem 0 1rem; font-size: .8125rem; }
+.later .proposal .window-body { padding: .75rem; }
+.later .note-line { font-size: .875rem; color: var(--on-navy-3); margin: 0 0 1rem; }
+
+.phone {
+  width: 100%; max-width: 20rem; margin: 0 auto;
+  background: var(--panel); color: var(--ink);
+  border-radius: 28px; padding: .75rem;
+  box-shadow: 0 0 0 8px #0a1b3f, 0 24px 50px -20px rgba(2,24,67,.5);
+  font-size: .8125rem;
+}
+.phone .ph-top { display: flex; justify-content: space-between; color: var(--muted); font-size: .6875rem; padding: .1rem .4rem .6rem; }
+.phone .ph-body { background: var(--paper); border-radius: 18px; padding: 1rem; display: grid; gap: .75rem; }
+.phone h4 { margin: 0; font-size: 1rem; }
+.phone .step { font-size: .75rem; color: var(--muted); }
+.phone .prompt { background: var(--panel); border-radius: var(--radius-m); padding: .75rem; box-shadow: 0 0 0 1px var(--line); }
+.phone .prompt i { display: block; font-style: normal; color: var(--muted); font-size: .6875rem; margin-top: .35rem; }
+
+.answer { display: flex; align-items: center; gap: .6rem; background: var(--panel); border-radius: var(--radius-s); padding: .5rem .6rem; box-shadow: 0 0 0 1px var(--line); font-size: .75rem; }
+.answer .play { width: 26px; height: 26px; border-radius: 50%; background: var(--teal); flex: none; position: relative; }
+.answer .play::after { content: ""; position: absolute; left: 10px; top: 8px; border-style: solid; border-width: 5px 0 5px 8px; border-color: transparent transparent transparent #fff; }
+.wave { flex: 1; height: 22px; display: flex; align-items: center; gap: 2px; min-width: 0; overflow: hidden; }
+.wave i { flex: 1 0 2px; max-width: 3px; border-radius: 2px; background: #9fb3c8; }
+.answer .dur { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.rec { display: flex; align-items: center; justify-content: center; gap: .6rem; padding: .7rem; border-radius: 999px; background: var(--raspberry); color: #fff; font-weight: 600; }
+.rec::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #fff; }
+
+.levels { display: flex; flex-wrap: wrap; gap: .35rem; }
+.levels span { border: 1px solid var(--line); background: var(--panel); border-radius: var(--radius-s); padding: .35rem .6rem; font-weight: 600; font-size: .8125rem; color: var(--ink-2); }
+.levels span.on { background: var(--teal); border-color: var(--teal); color: #fff; }
+
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+.checklist li { display: flex; align-items: center; gap: .55rem; background: var(--panel); border-radius: var(--radius-s); padding: .5rem .6rem; box-shadow: 0 0 0 1px var(--line); font-size: .8125rem; max-width: none; }
+.checklist li::before { content: ""; width: 1rem; height: 1rem; border-radius: 50%; flex: none; border: 1.5px solid #b8c3d1; }
+.checklist li.done::before { background: var(--green); border-color: var(--green); box-shadow: inset 0 0 0 3px #fff; }
+.checklist li.missing { color: #7d1850; }
+.checklist li.missing::before { border-color: var(--raspberry); }
+.checklist li .act { margin-left: auto; font-size: .75rem; font-weight: 600; color: var(--teal); }
+
+.cta-mock { display: block; text-align: center; padding: .7rem; border-radius: var(--radius-m); background: var(--teal); color: #fff; font-weight: 600; }
+.mini-bar { height: 6px; border-radius: 3px; background: #e3e8ef; overflow: hidden; width: 4.5rem; display: inline-block; vertical-align: middle; margin-right: .4rem; }
+.mini-bar i { display: block; height: 100%; background: var(--green); }
+.mini-bar.part i { background: var(--raspberry); }
+
+@media (max-width: 900px) {
+  .later { grid-template-columns: 1fr; }
+}
+.later .proposal { padding: 1.25rem 1.3rem; }
+.later .proposal h3 { margin-bottom: .4rem; }
+.later .meta-row { margin-top: 0; gap: .75rem 1.5rem; }
+.wave { gap: 3px; } .wave i { flex: 1 1 0; max-width: 5px; }
